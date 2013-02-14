@@ -95,8 +95,8 @@ textarea {
 
 #home 
 {
-	/*background: url(home-bg.jpg) 50% 0 repeat fixed;*/
-	background-color: #41924B;
+	background: url(../img/home-bg.png) 50% 0 repeat fixed;
+	/*background-color: #41924B;*/
 	min-height: 1000px;
 	height: 1000px;
 	margin: 0 auto;
@@ -107,22 +107,26 @@ textarea {
 
 #home article
 {
+	background: url(../img/home-title.png) no-repeat top;
 	height: 458px;
 	position: absolute;
-	text-align: center;
 	top: 150px;
 	width: 100%;
-	word-wrap:break-word;
-	text-shadow: 1px 1px 1px #34626B;
-	font-family:"Calibri", Arial, serif;
-	font-size:50px;
+}
+
+#home article p
+{
+	background-color: #9edf38;
+	color: #343434;
+	margin: 2px;
+	text-align: left;
+	width: 200px;
 }
 
 #services{
-	/*background: url(services-bg.jpg) 50% 0 no-repeat;*/
-	background-color: #AFEAAA;
-	min-height: 1000px;
-	height: 1000px;
+	background: url(../img/services-bg.png) 50% 0 no-repeat;
+	min-height: 1400px;
+	height: 1400px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
@@ -136,12 +140,33 @@ textarea {
 	height: 458px;
 	position: absolute;
 	text-align: center;
-	top: 150px;
+	top: 25px;
 	width: 100%;
 	word-wrap:break-word;
 	text-shadow: 1px 1px 1px #34626B;
 	font-family:"Calibri", Arial, serif;
 	font-size:50px;
+}
+
+#services article header
+{
+	border-bottom: 3px solid #9edf38;
+	width: 400px;
+	height: 80px;
+	margin-left: 100px;
+}
+
+#services article header h1
+{
+	font-size: 72px;
+	text-align: left;
+	font-family: Arial;
+	color: #ffffff;
+	
+}
+
+#agile_development{
+	
 }
 
 #team
