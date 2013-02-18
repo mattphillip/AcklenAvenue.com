@@ -18,6 +18,11 @@ textarea {
     color: #222;
 }
 
+@font-face {
+    font-family: Knockout;
+    src: url(fonts/Knockout.ttf);
+}
+
 body {
     font-size: 1em;
     line-height: 1.4;
@@ -93,34 +98,37 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+
+
 #home 
 {
 	background: url(../img/home-bg.png) 50% 0 repeat fixed;
-	/*background-color: #41924B;*/
-	min-height: 1000px;
-	height: 1000px;
+	min-height: 942px;
+	height: 942px;
 	margin: 0 auto;
-	width: 100%;
-	max-width: 1920px;
+	width: 1440px;
+	max-width: 1440px;
 	position: relative;
 }
 
-#home article
+.homeDiv
 {
-	background: url(../img/home-title.png) no-repeat top;
-	height: 458px;
-	position: absolute;
-	top: 150px;
-	width: 100%;
+    top: 250px;
+    left: 180px;
+    margin: auto;
+    position: relative;
 }
 
-#home article p
+#home p
 {
 	background-color: #9edf38;
 	color: #343434;
-	margin: 2px;
+	margin: 2px auto;
 	text-align: left;
-	width: 200px;
+	width: 300px;
+    font-family: "Courier New", Courier, monospace;
+    
 }
 
 #services{
@@ -128,41 +136,35 @@ textarea {
 	min-height: 1400px;
 	height: 1400px;
 	margin: 0 auto;
-	width: 100%;
-	max-width: 1920px;
+	width: 1440px;
+	max-width: 1440px;
 	position: relative;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
-#services article
-{
-	height: 458px;
-	position: absolute;
-	text-align: center;
-	top: 25px;
-	width: 100%;
-	word-wrap:break-word;
-	text-shadow: 1px 1px 1px #34626B;
-	font-family:"Calibri", Arial, serif;
-	font-size:50px;
+.titleComment{
+    color: #66ff33;
+    font-size: 72px;
 }
 
-#services article header
-{
-	border-bottom: 3px solid #9edf38;
-	width: 400px;
-	height: 80px;
-	margin-left: 100px;
-}
-
-#services article header h1
+#services h1
 {
 	font-size: 72px;
 	text-align: left;
-	font-family: Arial;
 	color: #ffffff;
-	
+    font-family: Knockout;
+    border-bottom: 2px solid #66ff33;
+    padding-bottom: 10px;
+    width: 300px;
+}
+
+#services h2
+{
+    font-size: 52px;
+    text-align: left;
+    color: #ffffff;
+    font-family: Knockout;
 }
 
 #agile_development{
