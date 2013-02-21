@@ -104,31 +104,11 @@ textarea {
 #home 
 {
 	background: url(../img/home-bg.png) 50% 0 repeat fixed;
-	min-height: 942px;
 	height: 942px;
 	margin: 0 auto;
 	width: 1440px;
 	max-width: 1440px;
 	position: relative;
-}
-
-.homeDiv
-{
-    top: 250px;
-    left: 180px;
-    margin: auto;
-    position: relative;
-}
-
-#home p
-{
-	background-color: #9edf38;
-	color: #343434;
-	margin: 2px auto;
-	text-align: left;
-	width: 300px;
-    font-family: "Courier New", Courier, monospace;
-    
 }
 
 #services{
@@ -143,37 +123,9 @@ textarea {
 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
-.titleComment{
-    color: #66ff33;
-    font-size: 72px;
-}
-
-#services h1
-{
-	font-size: 72px;
-	text-align: left;
-	color: #ffffff;
-    font-family: Knockout;
-    border-bottom: 2px solid #66ff33;
-    padding-bottom: 10px;
-    width: 300px;
-}
-
-#services h2
-{
-    font-size: 52px;
-    text-align: left;
-    color: #ffffff;
-    font-family: Knockout;
-}
-
-#agile_development{
-	
-}
-
 #team
 {
-	/*background: url(team-bg.jpg) 50% 0 no-repeat;*/
+	background: url(team-bg.jpg) 50% 0 no-repeat;*/
 	background-color: #87E293;
 	min-height: 1000px;
 	height: 1000px;
