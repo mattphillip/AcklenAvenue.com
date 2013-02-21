@@ -99,58 +99,67 @@ textarea {
    ========================================================================== */
 
 
+.home, .services, .team{
+	position: relative;
+	width: 1440px;
+}
 
-
-#home 
+.home 
 {
-	background: url(../img/home-bg.png) 50% 0 repeat fixed;
+	background-image: url(../img/home-bg.png);
+	background-attachment: fixed;
 	height: 942px;
-	margin: 0 auto;
-	width: 1440px;
-	max-width: 1440px;
-	position: relative;
 }
 
-#services{
-	background: url(../img/services-bg.png) 50% 0 no-repeat;
-	min-height: 1400px;
-	height: 1400px;
-	margin: 0 auto;
-	width: 1440px;
-	max-width: 1440px;
-	position: relative;
-	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-	box-shadow: 0 0 50px rgba(0,0,0,0.8);
-}
-
-#team
+.home .title
 {
-	background: url(team-bg.jpg) 50% 0 no-repeat;*/
-	background-color: #87E293;
-	min-height: 1000px;
-	height: 1000px;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1920px;
-	position: relative;
-	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	width:446px;
+	margin:0 auto;
 }
 
-#team article
+#homeTitle.row
 {
-	height: 458px;
-	position: absolute;
 	text-align: center;
-	top: 150px;
-	width: 100%;
-	word-wrap:break-word;
-	text-shadow: 1px 1px 1px #34626B;
-	word-wrap:break-word;
-	text-shadow: 1px 1px 1px #34626B;
-	font-family:"Calibri", Arial, serif;
-	font-size:50px;
 }
+
+.comment, .subtitle{
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.home .comment{
+	color:#9edf38;
+	margin:2px auto;
+	width:10px;
+}
+
+.home .subtitle{
+	background-color:#9edf38;
+	margin:2px auto; 
+	width:270px;
+	word-wrap: break-word;
+
+}
+
+.services, .team{
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+.services{
+	background-image: url(../img/services-bg.png);
+	height: 1400px;
+	z-index: 0;
+	
+}
+
+.team
+{
+	background: url(../img/team-bg.png) 50% 0 no-repeat;
+	background-color: #fffff;
+	height: 2244px;
+	z-index: 10;
+}
+
 
 /* ==========================================================================
    Helper classes
