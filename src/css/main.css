@@ -111,14 +111,9 @@ textarea {
 	height: 942px;
 }
 
-.home .title
-{
-	width:446px;
-	margin:0 auto;
-}
-
 #homeTitle.row
 {
+top:50%;
 	text-align: center;
 }
 
@@ -126,18 +121,20 @@ textarea {
 	font-family: 'Courier New', Courier, monospace;
 }
 
-.home .comment{
+.home .subtitle{
 	color:#9edf38;
-	margin:2px auto;
-	width:10px;
+	display:block;
+	margin:10px 10px 0px auto;
+	width: 300px;
 }
 
-.home .subtitle{
+.home .subtitle span{
 	background-color:#9edf38;
-	margin:2px auto; 
 	width:270px;
 	word-wrap: break-word;
-
+	float:right;
+	text-align: left;
+	color:black;
 }
 
 .services, .team{
