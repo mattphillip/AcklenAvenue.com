@@ -111,6 +111,14 @@ textarea {
 	height: 942px;
 }
 
+.home .homeContainer{
+	height:135px;
+	width:446px;
+	margin:0 auto;
+	position:relative; 
+	top:30%;
+}
+
 #homeTitle.row
 {
 top:50%;
@@ -145,8 +153,29 @@ top:50%;
 .services{
 	background-image: url(../img/services-bg.png);
 	height: 1400px;
-	z-index: 0;
 	
+}
+
+.services .servicesContainer{
+	margin-left: 10%;
+	top:100px;
+}
+
+.servicesTitle{
+	width:450px;
+	color:#9edf38;
+	font-family: 'Knockout';
+	font-size: 72px;
+}
+
+.servicesTitle span
+{
+	margin-left: 10px;
+	color:#fff;
+	border-bottom:2px solid #9edf38;
+	width: 400px;
+	display: inline-block;
+	height: 60px;
 }
 
 .team
