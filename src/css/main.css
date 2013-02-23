@@ -178,6 +178,35 @@ top:50%;
 	height: 60px;
 }
 
+.servicesSubtitle
+{
+	font-family: 'Knockout';
+	display: inline;
+}
+
+.servicesSubtitle img
+{
+	width: 59px;
+	display: inline-block;
+}
+
+.servicesSubtitle h2{
+	font-size: 120px;
+	color:#9edf38;
+	display: inline-block;
+	margin: 0 0 0 0;
+}
+
+.servicesSubtitle h2 span{
+	font-size: 40px;
+	color: #ffffff;
+	word-wrap: break-word;
+	text-align: left;
+	display: inline-block;
+	width: 230px;
+	float: left;
+}
+
 .team
 {
 	background: url(../img/team-bg.png) 50% 0 no-repeat;
