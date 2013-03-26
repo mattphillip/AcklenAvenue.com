@@ -4,7 +4,31 @@
    Author's custom styles
    ========================================================================== */
 
+canvas{
+	transition: transform 1s;
+	-moz-transition: -moz-transform 1s; /* Firefox 4 */
+	-webkit-transition: -webkit-transform 1s; /* Safari and Chrome */
+	-o-transition: -o-transform 1s; /* Opera */
 
+	transform: scale(1,1);
+	-ms-transform: scale(1,1); /* IE 9 */
+	-webkit-transform: scale(1,1); /* Safari and Chrome */
+	-o-transform: scale(1,1); /* Opera */
+	-moz-transform: scale(1,1); 
+}
+
+canvas:hover{
+	transition: transform 1s;
+	-moz-transition: -moz-transform 1s; /* Firefox 4 */
+	-webkit-transition: -webkit-transform 1s; /* Safari and Chrome */
+	-o-transition: -o-transform 1s; /* Opera */
+
+	transform: scale(2,2);
+	-ms-transform: scale(2,2); /* IE 9 */
+	-webkit-transform: scale(2,2) translate(20px,20px);
+	-o-transform: scale(2,2); /* Opera */
+	-moz-transform: scale(2,2); /* Firefox */
+}
 
 
 
