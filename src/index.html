@@ -77,20 +77,31 @@
 
             <!-- Example row of columns -->
             <div class="row">
-                <div class="span4">
-                    <canvas id="canvas"></canvas>
-                    <img id="tree" src="img/test.png" style="display:none">
+                <div id="chart" class="span4">
                 </div>
-                <div class="span4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
+                <div class="span8">
+                    <ul class="nav nav-tabs" style="display:none" id="myTab">
+                        <li class="active"><a href="#dotNetDevelopment" data-toggle="tab"></a></li>
+                        <li><a href="#internetSecurity" data-toggle="tab"></a></li>
+                        <li><a href="#SAS" data-toggle="tab"></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="dotNetDevelopment">
+                            <h2>.Net Development</h2>
+                            <p>// Need an expert Nashville .Net Developer? Acklen Avenue specializaes in Microsoft's ASP .NET programming platform. .Net offers one of the most stable and functional programming platforms available on the market today. .Net is more secure and more advanced than many of the other programming languages available on the market and is a smart choice if you want a platform for your project that will withstand the test of time, is easy to upgrade and draws on Microsoft's substantive support.
+                                If you are looking to outsource or hire freelance .Net programmers, fill out our "hire us" form - .NET is our programming specialty.</p>
+                        </div>
+                        <div class="tab-pane" id="internetSecurity">
+                            <h2>Internet Security</h2>
+                    <p>Internet Security details here</p>
+                        </div>
+                        <div class="tab-pane" id="SAS">
+                            <h2>SAS</h2>
+                    <p>SAS details here</p>
+                        </div>
+                    </div>
                </div>
-                <div class="span4">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
-                </div>
+                
             </div>
 
             <hr>
@@ -101,9 +112,10 @@
 
         </div> <!-- /container -->
 
+        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
+        <script src="http://code.highcharts.com/highcharts.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/plugins.js"></script>
