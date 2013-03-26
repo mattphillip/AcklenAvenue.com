@@ -77,9 +77,33 @@
 
             <!-- Example row of columns -->
             <div class="row">
+                <!-- HighCharts Markup
                 <div id="chart" class="span4">
                 </div>
-                <div class="span8">
+            -->
+                <!--HTML5 Markup-->
+                <div class="span5">
+                    <table id="chartData" style="display: none">
+                        <tr>
+                            <th>Widget</th><th>Sales ($)</th>
+                         </tr>
+
+                        <tr style="color: #2F77AA">
+                            <td>SAS</td><td>1</td>
+                        </tr>
+                        <tr style="color: #0B2D14">
+                            <td>Internet Security</td><td>1</td>
+                        </tr>
+                        <tr style="color: #7BB1D7">
+                            <td>.NET Development</td><td>1</td>
+                        </tr>
+                        
+                    </table>
+                    <canvas id="chart" width="500" height="450"></canvas>
+                </div>
+                
+                
+                <div class="span7">
                     <ul class="nav nav-tabs" style="display:none" id="myTab">
                         <li class="active"><a href="#dotNetDevelopment" data-toggle="tab"></a></li>
                         <li><a href="#internetSecurity" data-toggle="tab"></a></li>
@@ -116,6 +140,11 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
+
+        <!--[if IE]>
+        <script src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+        <![endif]-->
+
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/plugins.js"></script>
