@@ -62,8 +62,8 @@ $(document).ready(function() {
   var sliceBorderStyle = "#fff"; // Colour of the border around each slice
   var sliceGradientColour = "#ddd"; // Colour to use for one end of the chart gradient
   var maxPullOutDistance = 25; // How far, in pixels, to pull slices out when clicked
-  var pullOutFrameStep = 4; // How many pixels to move a slice with each animation frame
-  var pullOutFrameInterval = 40; // How long (in ms) between each animation frame
+  var pullOutFrameStep = 1; // How many pixels to move a slice with each animation frame
+  var pullOutFrameInterval = 10; // How long (in ms) between each animation frame
   var pullOutLabelPadding = 55; // Padding between pulled-out slice and its label  
   var pullOutLabelFont = "bold 16px 'Trebuchet MS', Verdana, sans-serif"; // Pull-out slice label font
   var pullOutValueFont = "bold 12px 'Trebuchet MS', Verdana, sans-serif"; // Pull-out slice value font
