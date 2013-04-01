@@ -1,4 +1,11 @@
-
+@font-face {
+	font-family: 'knockout';
+	src: url('fonts/Knockout-HTF28-JuniorFeatherwt.otf'); /* IE9 Compat Modes */
+	src: url('fonts/Knockout-HTF28-JuniorFeatherwt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('fonts/Knockout-HTF28-JuniorFeatherwt.woff') format('woff'), /* Modern Browsers */
+	     url('fonts/Knockout-HTF28-JuniorFeatherwt.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('fonts/Knockout-HTF28-JuniorFeatherwt.svg#knockout') format('svg'); /* Legacy iOS */
+	}
 
 /* ==========================================================================
    Author's custom styles
@@ -11,11 +18,35 @@
   cursor: pointer;
 }
 
+.avatar{
+	position: relative;
+}
+
 .binary{
 	color: #7BB1D7;
 	display: none;
 	padding-top: 25px;
 	text-align: right;
+}
+
+.circular{
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	-webkit-border-radius: 125px;
+	-moz-border-radius: 125px;
+	background: url('../img/image1.jpg') no-repeat;
+}
+
+.circularGray{
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	-webkit-border-radius: 125px;
+	-moz-border-radius: 125px;
+	background: url('../img/image2.jpg') no-repeat;
+	position: absolute;
+	top: 0px;
 }
 
 .number{
@@ -45,4 +76,11 @@
 
 .servicesContent{
 	height: 100px;
+}
+
+.staff{
+	font-family: 'knockout';
+	font-size: 30px;
+	text-align: center;
+	padding: 10px 0px 10px 0px;
 }

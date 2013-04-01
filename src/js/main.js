@@ -381,7 +381,22 @@ var startNumberTabs = function() {
   $($('.number')[0]).click();
 }
 
+var startCircularAvatars = function() {
+  $(".circularGray").hover(function() {
+    $(this).stop().animate({
+      'opacity': 0
+    }, 500);
+  });
+  $(".circularGray").mouseout(function() {
+    $(this).stop().animate({
+      'opacity': 1
+    }, 500);
+  });
+
+}
+
 $(document).ready(function() {
   startGraph();
   startNumberTabs();
+  startCircularAvatars();
 });
