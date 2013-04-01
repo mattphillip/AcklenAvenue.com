@@ -1,60 +1,5 @@
-//HighCharts Code
-/*$(function () {
-    $('#chart').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            width: null,
-            height: 200
-        },
-        title:{
-            text: ""    
-        },
-        tooltip: {
-    	    enabled: false
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    color: '#000000',
-                    connectorColor: '#000000',
-                    formatter: function() {
-                        return '<b>'+ this.point.name +'</b>';
-                    }
-                }
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Browser share',
-            data: [
-                ['SAS',   33.0],
-                ['Internet Security',       34.0],
-                ['.NET Development',    33.0],
-            ]
-        }]
-    });
-});
-$(document).ready(function(){
-var pieChartElements = $('path').splice(3,6);
-$(pieChartElements[0]).click(function(){
-$("a[href='#SAS']").click();
-});
-$(pieChartElements[1]).click(function(){
-$("a[href='#internetSecurity']").click();
-});
-$(pieChartElements[2]).click(function(){
-$("a[href='#dotNetDevelopment']").click();
-});
-
-});*/
-
 //HTML5 Code
-$(document).ready(function() {
+var startGraph = function() {
 
   // Config settings
   var chartSizePercent = 55; // The chart radius relative to the canvas width/height (in percent)
@@ -340,16 +285,16 @@ $(document).ready(function() {
       startY = centreY + Math.sin(midAngle) * actualPullOutDistance;
       context.fillStyle = 'rgb(' + chartColours[slice].join(',') + ')';
       context.textAlign = "center";
-      context.fillText(chartData[slice]['label'], centreX + Math.cos(midAngle) * (chartRadius + maxPullOutDistance + pullOutLabelPadding), centreY + Math.sin(midAngle) * (chartRadius + maxPullOutDistance + ((chartData[slice]['label']=="Internet Security")?25:pullOutLabelPadding)));
+      context.fillText(chartData[slice]['label'], centreX + Math.cos(midAngle) * (chartRadius + maxPullOutDistance + pullOutLabelPadding), centreY + Math.sin(midAngle) * (chartRadius + maxPullOutDistance + ((chartData[slice]['label'] == "Internet Security") ? 25 : pullOutLabelPadding)));
       context.font = pullOutValueFont;
       context.shadowOffsetX = pullOutShadowOffsetX;
       context.shadowOffsetY = pullOutShadowOffsetY;
       context.shadowBlur = pullOutShadowBlur;
-      if(chartData[slice]['label'] == "SAS"){
+      if (chartData[slice]['label'] == "SAS") {
         $("a[href='#SAS']").click();
-      }else if(chartData[slice]['label'] == "Internet Security"){
+      } else if (chartData[slice]['label'] == "Internet Security") {
         $("a[href='#internetSecurity']").click();
-      }else{
+      } else {
         $("a[href='#dotNetDevelopment']").click();
       }
 
@@ -364,7 +309,7 @@ $(document).ready(function() {
     var sliceGradient = context.createLinearGradient(0, 0, canvasWidth * .75, canvasHeight * .75);
     var midAngle = (startAngle + endAngle) / 2;
     var actualPullOutDistance = currentPullOutDistance * easeOut(currentPullOutDistance / maxPullOutDistance, .8);
-      
+
     sliceGradient.addColorStop(0, sliceGradientColour);
     sliceGradient.addColorStop(1, 'rgb(' + chartColours[slice].join(',') + ')');
 
@@ -379,14 +324,12 @@ $(document).ready(function() {
     context.shadowColor = (slice == currentPullOutSlice) ? pullOutShadowColour : "rgba( 0, 0, 0, 0 )";
     context.fill();
     context.shadowColor = "rgba( 0, 0, 0, 0 )";
-    
-    context.font = pullOutValueFont; 
-    context.fillText(chartData[slice]['label'], centreX + Math.cos(midAngle) * (chartRadius + maxPullOutDistance + pullOutLabelPadding), centreY + Math.sin(midAngle) * (chartRadius + maxPullOutDistance + ((chartData[slice]['label']=="Internet Security")?25:pullOutLabelPadding)));
-    
 
-    
+    context.font = pullOutValueFont;
+    context.fillText(chartData[slice]['label'], centreX + Math.cos(midAngle) * (chartRadius + maxPullOutDistance + pullOutLabelPadding), centreY + Math.sin(midAngle) * (chartRadius + maxPullOutDistance + ((chartData[slice]['label'] == "Internet Security") ? 25 : pullOutLabelPadding)));
 
-    
+
+
     // Style the slice border appropriately
     if (slice == currentPullOutSlice) {
       context.lineWidth = pullOutBorderWidth;
@@ -409,8 +352,36 @@ $(document).ready(function() {
    * @param Number The power (higher numbers = more gradual easing)
    * @return Number The new ratio
    */
+
   function easeOut(ratio, power) {
     return (Math.pow(1 - ratio, power) + 1);
   }
+}
 
+var startNumberTabs = function() {
+  $('.number').click(function() {
+    if ($(this).css("color") != "rgb(123, 177, 215)") {
+      $('.number').css("color", "black");
+      $('.binary').hide("blind", {
+        direction: "horizontal"
+      }, 500);
+      $('.ntWrapper').hide("blind", {
+        direction: "horizontal"
+      }, 500);
+      $(this).css("color", "#7BB1D7");
+      $(this).prev().show("blind", {
+        direction: "horizontal"
+      }, 500);
+      $(this).next().show("blind", {
+        direction: "horizontal"
+      }, 500);
+    }
+
+  });
+  $($('.number')[0]).click();
+}
+
+$(document).ready(function() {
+  startGraph();
+  startNumberTabs();
 });

@@ -10,3 +10,39 @@
   float: left;
   cursor: pointer;
 }
+
+.binary{
+	color: #7BB1D7;
+	display: none;
+	padding-top: 25px;
+	text-align: right;
+}
+
+.number{
+	float: left;
+	font-size: 100px;
+	font-weight: bold;
+	height: 100px;
+	line-height: 80px;
+	padding-top: 15px;
+	text-align: center;
+}
+
+.numberTitle{
+	display: table-cell;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 80%;
+	height: 100px;	
+	vertical-align: middle;
+}
+
+.ntWrapper{
+	height: 100px;	
+	display: table;
+	display: none;
+}
+
+.servicesContent{
+	height: 100px;
+}
