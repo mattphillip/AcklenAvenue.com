@@ -74,8 +74,21 @@
 	display: none;
 }
 
+.pieContent{
+	background-color: #ECECEC;
+	height: 250px;
+	padding: 15px;
+	font-size: 20px;	
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
 .servicesContent{
-	height: 100px;
+	height: 150px;
+	font-size: 20px;
+	margin-bottom: 200px;
+	line-height: 120%;	
 }
 
 .staff{
@@ -94,4 +107,18 @@
   	-moz-background-size: 100% 100%;
   	-o-background-size: 100% 100%;
   	background-size: 100% 100%;
+}
+
+#services
+{
+	background-image:url(../img/background-street.png);
+	background-repeat:no-repeat;
+	-webkit-background-size: 100% 150%;
+  	-moz-background-size: 100% 150%;
+  	-o-background-size: 100% 150%;
+  	background-size: 100% 150%;
+  	-webkit-background-origin:content-box; /* Safari */
+	background-origin:content-box;
+
+  	padding: 100px 0px 0px 0px;
 }
