@@ -198,3 +198,33 @@
 #triangle{
 	margin-bottom: -3px;
 }
+
+#method{
+	background-image:url(../img/background-car-lights.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	-webkit-background-size: 100% 100%;
+  	-moz-background-size: 100% 100%;
+  	-o-background-size: 100% 100%;
+  	background-size: 100% 100%;
+}
+
+#method-title{
+	background-image:url(../img/background-window.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	-webkit-background-size: 100% 100%;
+  	-moz-background-size: 100% 100%;
+  	-o-background-size: 100% 100%;
+  	background-size: 100% 100%;
+}
+
+#method-title{
+	background-image:url(../img/blue-box.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	-webkit-background-size: 100% 100%;
+  	-moz-background-size: 100% 100%;
+  	-o-background-size: 100% 100%;
+  	background-size: 100% 100%;
+}
