@@ -356,7 +356,7 @@ var startGraph = function() {
   function easeOut(ratio, power) {
     return (Math.pow(1 - ratio, power) + 1);
   }
-}
+};
 
 var startNumberTabs = function() {
   $('.number').click(function() {
@@ -379,7 +379,7 @@ var startNumberTabs = function() {
 
   });
   $($('.number')[0]).click();
-}
+};
 
 var startCircularAvatars = function() {
   $(".circularGray").hover(function() {
@@ -392,15 +392,57 @@ var startCircularAvatars = function() {
       'opacity': 1
     }, 500);
   });
+};
 
-}
+var drawTriangle = function() {
+  var elem = document.getElementById('triangle');
+  canvasWidth = $(window).width();
+  canvasHeight = $(window).height();
+  elem.width = canvasWidth;
+  elem.height = canvasHeight;
+  if (elem && elem.getContext) {
+    var context = elem.getContext('2d');
+    if (context) {
+      elem = $(elem);
+      canvasWidth = elem.css("width").substring(0, elem.css("width").length - 2);
+      canvasHeight = elem.css("height").substring(0, elem.css("height").length - 2);
+
+      console.log(canvasWidth);
+      console.log(canvasHeight);
+
+      context.fillStyle = '#282828';
+      context.strokeStyle = '#282828';
+      context.lineWidth = 4;
+
+      context.beginPath();
+      // Start from the top-left p
+      context.moveTo(parseInt(canvasWidth), 0); // give the (x,y) coordinates
+      context.lineTo(parseInt(canvasWidth), parseInt(canvasHeight));
+      context.lineTo(0, parseInt(canvasHeight));
+      context.lineTo(parseInt(canvasWidth), 0);
+
+      // Done! Now fill the shape, and draw the stroke.
+      // Note: your shape will not be visible until you call any of the two methods.
+      context.fill();
+      context.stroke();
+      context.closePath();
+    }
+  } else {
+
+  }
+};
 
 $(document).ready(function() {
   startGraph();
   startNumberTabs();
-  
-  var size = $(window).height(); 
-  $('#home').css("height",size);
-  
+
+  var size = $(window).height();
+  $('#home').css("height", size);
+
   startCircularAvatars();
+  drawTriangle();
+});
+
+$(window).resize(function() {
+  drawTriangle();
 });
