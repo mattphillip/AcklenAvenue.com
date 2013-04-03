@@ -142,16 +142,21 @@
 }
 
 #menu{
-	margin: 0 auto;
+	margin: auto;
 	text-align: center;
+	position:fixed;
+	width: 100%;
+	height:40px;
+	background-color:rgba(0, 0, 0, 0.5);
+	padding-top:20px;
+	z-index:20;
 }
 
 #menu li{
 	display:inline;
-	padding-right:20px;
-	padding-left: 20px;
-	border-right: 1px solid #999;
-	
+	padding: 10px 20px 10px 20px;
+	border-right: 1px solid #FFF;
+	height:40px;
 }
 
 #menu li:last-child{
@@ -160,11 +165,11 @@
 
 #menu a{
 	display:inline-block;
-	color:#999;
+	color:#FFF;
 }
 
 #menu a:hover{
-    color:#666;
+	color:#CCC;
 }
 
 #menu a:active{
@@ -210,6 +215,9 @@
 }
 
 #method-title{
+	/*position:relative;
+	top: -20px;
+	opacity: 0.5;*/
 	background-image:url(../img/background-window.png);
 	background-repeat:no-repeat;
 	background-position:center;
@@ -217,9 +225,18 @@
   	-moz-background-size: 100% 100%;
   	-o-background-size: 100% 100%;
   	background-size: 100% 100%;
+	padding: 362px 0 362px 0;
 }
 
-#method-title{
+#method-title h1{
+	font-size:38px;
+	text-align:center;
+	width: 750px;
+	font-weight:normal;
+	margin:auto;
+}
+
+#method-description{
 	background-image:url(../img/blue-box.png);
 	background-repeat:no-repeat;
 	background-position:center;
