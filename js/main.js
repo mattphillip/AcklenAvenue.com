@@ -436,8 +436,14 @@ $(document).ready(function() {
   startGraph();
   startNumberTabs();
 
+
+
   var size = $(window).height();
   $('#home').css("height", size);
+  
+	$.stellar({
+		horizontalOffset: 40
+	});  
 
   startCircularAvatars();
   drawTriangle();
