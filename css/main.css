@@ -237,11 +237,22 @@
 }
 
 #method-description{
+	color:#FFF;
 	background-image:url(../img/blue-box.png);
 	background-repeat:no-repeat;
-	background-position:center;
+	background-position:top;
 	-webkit-background-size: 100% 100%;
   	-moz-background-size: 100% 100%;
   	-o-background-size: 100% 100%;
   	background-size: 100% 100%;
+	position:relative;
+	height:1024px;
+}
+
+#method-description p{
+	font-weight:normal;
+}
+
+#method-description h1{
+	margin-left:-40px;
 }
