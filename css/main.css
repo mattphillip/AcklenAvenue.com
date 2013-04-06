@@ -124,6 +124,7 @@
   	-moz-background-size: 100% 100%;
   	-o-background-size: 100% 100%;
   	background-size: 100% 100%;
+	background-attachment:fixed;
 }
 
 
@@ -255,4 +256,5 @@
 
 #method-description h1{
 	margin-left:-40px;
+	
 }
