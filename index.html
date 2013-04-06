@@ -9,13 +9,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -25,14 +21,14 @@
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 			
             <nav id="menu">
-                	<li> <a href="#">home</a></li>
-                    <li> <a href="#">method</a></li>
-                    <li> <a href="#">services</a></li>
-                    <li> <a href="#">team</a></li>
-                    <li> <a href="#">blog</a></li>
-                    <li> <a href="#">contact</a></li>
+                	<li> <a class="scrollTo" href="#home">home</a></li>
+                    <li> <a class="scrollTo" href="#method">method</a></li>
+                    <li> <a class="scrollTo" href="#services">services</a></li>
+                    <li> <a class="scrollTo" href="#staff">team</a></li>
+                    <li> <a class="scrollTo" href="#blog">blog</a></li>
+                    <li> <a class="scrollTo" href="#contact">contact</a></li>
             </nav>
-            
+            			
 			<section id="home" data-stellar-background-ratio="0.5">
                 	<h1>ACKLEN / AVENUE</h1>
             </section>
@@ -253,31 +249,43 @@
                     </section>
 
 
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="js/vendor/jquery.stellar.min.js"></script>
 
-
-
-
-                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-                    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-                    <script src="http://code.highcharts.com/highcharts.js"></script>
-                    <script src="js/vendor/jquery.stellar.min.js"></script>
-
-    <!--[if IE]> 
+		<!--[if IE]> 
     	<script src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
         <![endif]-->
 
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/jquery-ui-1.10.2.custom.min.js"></script>
-
+        <script src="js/vendor/bootstrap.min.js"></script>        
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
         <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+            s.parentNode.insertBefore(g,s)}(document,'script'));			
         </script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function(){
+				var $root = $('html, body');				
+				$(".scrollTo").click(function(){
+					var id =  $.attr(this, 'href');
+					var section = $("section" +id)[0];
+					if(section){					
+						$root.animate({
+							scrollTop: $(section).offset().top 
+							}, 
+						1000, 'easeOutQuart');						
+						return false;						
+					}					
+				});
+			});			
+		</script>
     </body>
     </html>
