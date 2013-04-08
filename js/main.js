@@ -434,8 +434,10 @@ var drawTriangle = function() {
 
 function scrollTo(section)
 {
-	var sectionOffset = $(section).offset();
-	$('html, body').animate({scrollTop: sectionOffset.top }, "slow");
+	if (section){
+		var sectionOffset = $(section).offset();
+		$('html, body').animate({scrollTop: sectionOffset.top }, "slow");
+	}
 };
 
 $(document).ready(function() {
@@ -454,7 +456,7 @@ $(document).ready(function() {
   startCircularAvatars();
   drawTriangle();
   
-  $("#menu a").click(function() {
+  	$("#menu a").click(function() {
 		scrollTo($(this).attr('href'));
 	});
   
