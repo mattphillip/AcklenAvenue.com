@@ -16,6 +16,7 @@
   margin: -50px 0px 0px 0px;
   float: left;
   cursor: pointer;
+  position: relative;
 }
 
 .avatar{
@@ -216,8 +217,8 @@
 }
 
 #method-title{
-	/*position:relative;
-	top: -20px;
+	position:relative;
+	/*top: -20px;
 	opacity: 0.5;*/
 	background-image:url(../img/background-window.png);
 	background-repeat:no-repeat;
@@ -235,6 +236,7 @@
 	width: 750px;
 	font-weight:normal;
 	margin:auto;
+	position:relative;
 }
 
 #method-description{

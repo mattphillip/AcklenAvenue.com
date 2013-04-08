@@ -432,21 +432,32 @@ var drawTriangle = function() {
   }
 };
 
+function scrollTo(section)
+{
+	var sectionOffset = $(section).offset();
+	$('html, body').animate({scrollTop: sectionOffset.top }, "slow");
+};
+
 $(document).ready(function() {
   startGraph();
   startNumberTabs();
 
 
-
   var size = $(window).height();
   $('#home').css("height", size);
   
-	$.stellar({
-		horizontalOffset: 40
-	});  
-
+  
+  $.stellar({
+	hideDistantElements: false
+  });  
+  
   startCircularAvatars();
   drawTriangle();
+  
+  $("#menu a").click(function() {
+		scrollTo($(this).attr('href'));
+	});
+  
 });
 
 $(window).resize(function() {

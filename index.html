@@ -17,7 +17,7 @@
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 </head>
-<body>
+<body >
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -25,22 +25,22 @@
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 			
             <nav id="menu">
-                	<li> <a href="#">home</a></li>
-                    <li> <a href="#">method</a></li>
-                    <li> <a href="#">services</a></li>
-                    <li> <a href="#">team</a></li>
-                    <li> <a href="#">blog</a></li>
-                    <li> <a href="#">contact</a></li>
+                    <li> <a href="#home">home</a></li>
+                    <li> <a href="#method-description">method</a></li>
+                    <li> <a href="#services">services</a></li>
+                    <li> <a href="#staff">team</a></li>
+                    <li> <a href="#blog">blog</a></li>
+                    <li> <a href="#contact">contact</a></li>
             </nav>
             
-			<section id="home" data-stellar-background-ratio="0.5">
+			<section id="home" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="45">
                 	<h1>ACKLEN / AVENUE</h1>
             </section>
             
             <section id="method" >
             	
-            	<div id="method-title" >
-                	<h1>WE CREATE CUSTOM SOFTWARE THAT PEOPLE <strong>LOVE TO USE</strong></h1>
+            	<div id="method-title" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="45" >
+                	<h1 data-stellar-ratio="2" data-stellar-vertical-offset="150" data-stellar-horizontal-offset="250">WE CREATE CUSTOM SOFTWARE THAT PEOPLE <strong>LOVE TO USE</strong></h1>
                 </div>
                 
                 <div id="method-description" >
@@ -82,7 +82,7 @@
                 
             </section>
 
-        <section id="services" >
+        <section id="services"  >
             <div class="container">
                 <h1>// services</h1>
                 <div class="row">
