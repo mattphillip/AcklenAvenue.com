@@ -7,6 +7,11 @@
 	     url('fonts/Knockout-HTF28-JuniorFeatherwt.svg#knockout') format('svg'); /* Legacy iOS */
 	}
 
+@font-face {
+	font-family: 'gotham';
+	src:url('fonts/gotham.ttf');
+}
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -118,7 +123,7 @@
 
 #home
 {
-	background-image:url(../img/background-traffic.png);
+	background-image:url(../img/background-traffic.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 	-webkit-background-size: 100% 100%;
@@ -214,6 +219,8 @@
   	-moz-background-size: 100% 100%;
   	-o-background-size: 100% 100%;
   	background-size: 100% 100%;
+	padding-bottom:100px;
+	position:relative;
 }
 
 #method-title{
@@ -232,16 +239,18 @@
 
 #method-title h1{
 	font-size:38px;
-	text-align:center;
-	width: 750px;
+	text-align:left;
+	width: 700px;
 	font-weight:normal;
 	margin:auto;
 	position:relative;
+	font-family:'gotham',sans-serif,arial;
 }
 
 #method-description{
 	color:#FFF;
-	background-image:url(../img/blue-box.png);
+	/*background-image:url(../img/blue-box.png);*/
+	background-color: rgba(102,153,204, 0.6);
 	background-repeat:no-repeat;
 	background-position:top;
 	-webkit-background-size: 100% 100%;
