@@ -184,7 +184,7 @@
 }
 #services
 {
-	background-image:url(../img/background-street.png);
+	background-image:url(../img/background-street.jpg);
 	background-repeat:no-repeat;
 	-webkit-background-size: 100% 150%;
   	-moz-background-size: 100% 150%;
@@ -212,7 +212,7 @@
 }
 
 #method{
-	background-image:url(../img/background-car-lights.png);
+	background-image:url(../img/background-car-lights.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 	-webkit-background-size: 100% 100%;
@@ -227,7 +227,7 @@
 	position:relative;
 	/*top: -20px;
 	opacity: 0.5;*/
-	background-image:url(../img/background-window.png);
+	background-image:url(../img/background-window.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 	-webkit-background-size: 100% 100%;
