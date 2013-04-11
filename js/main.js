@@ -444,9 +444,7 @@ $(document).ready(function() {
   startGraph();
   startNumberTabs();
 
-
-  var size = $(window).height();
-  $('#home').css("height", size);
+  $('#home').css("height", $(window).height());
   
   
   $.stellar({
