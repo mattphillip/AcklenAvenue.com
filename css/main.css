@@ -8,8 +8,28 @@
 	}
 
 @font-face {
-	font-family: 'gotham';
-	src:url('fonts/gotham.ttf');
+	font-family: 'GothamMedium';
+	src:url('fonts/GothamHTF_Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueRegular';
+	src:url('fonts/HelveticaNeue_Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'HelveticaNeueBold';
+	src:url('fonts/HelveticaNeue_Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src:url('fonts/GothamHTF_Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'GothamBook';
+	src:url('fonts/GothamHTF_Book.ttf') format('truetype');
 }
 
 /* ==========================================================================
@@ -137,15 +157,16 @@
 #home h1
 {
 	margin:0 auto;
-	font-size:46px;
+	font-size:46pt;
 	text-align:center;
 	color:#FFF;
 	background-color:#7a7a7a;
 	height:70px;
-	width: 450px;
+	width: 650px;
 	padding-top:20px;
 	position:relative;
 	top: 40%;
+	font-family:'GothamBold',sans-serif,arial;
 }
 
 #menu{
@@ -173,6 +194,8 @@
 #menu a{
 	display:inline-block;
 	color:#FFF;
+	font-family: 'HelveticaNeueRegular',sans-serif,arial;
+	font-size:18pt;
 }
 
 #menu a:hover{
@@ -239,13 +262,15 @@
 }
 
 #method-title h1{
-	font-size:38px;
+	font-size:38pt;
 	text-align:left;
-	width: 700px;
+	width: 900px;
+	color:#373737;
 	font-weight:normal;
 	margin:auto;
 	position:relative;
-	font-family:'gotham',sans-serif,arial;
+	font-family:'GothamMedium',sans-serif,arial;
+	line-height: 105%;
 }
 
 #method-description{
@@ -260,13 +285,24 @@
   	background-size: 100% 100%;
 	position:relative;
 	height:1024px;
+	font-family:'HelveticaNeueRegular',sans-serif,arial;
+	line-height:normal;
 }
 
 #method-description p{
 	font-weight:normal;
+	font-size:12pt;
+	right:30px;
+	
 }
 
 #method-description h1{
-	margin-left:-40px;
-	
+	padding-top:110px;
+	margin-left:-100px;
+	font-size:72pt;
+}
+
+#method-description h3{
+	margin-left:0px;
+	font-size:24pt;
 }
