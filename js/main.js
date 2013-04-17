@@ -447,7 +447,6 @@ $(document).ready(function() {
 
   $('#home').css("height", $(window).height());
   
-  
   $.stellar({
 	hideDistantElements: false
   });  
@@ -455,12 +454,7 @@ $(document).ready(function() {
   startCircularAvatars();
   drawTriangle();
   
-  	//$("#menu a").click(function() {
-		//scrollTo($(this).attr('href'));
-	//	return false;
-	//});
   
-  /**/
   
   function filterPath(string) {
   return string
