@@ -175,8 +175,7 @@
 
 .wrapper_text {
     height: 620px;
-    margin-left: auto;
-    margin-right: auto;
+	margin: 0 auto;
     width: 960px;
 }
 
@@ -262,16 +261,17 @@
 	margin: 0 auto;
 	font-size:28pt;
 	text-align:left;
-	width: 700px;
+	width: 655px;
 	color:#373737;
 	font-weight:normal;
-	margin:auto;
 	position:relative;
 	font-family:'GothamMedium',sans-serif,arial;
 	line-height: 105%;
+	top: 45%;
 }
 
 #method{
+	margin-top:-30px;
 	background-image:url(../img/background-car-lights.jpg);
 	font-family:'HelveticaNeueRegular',sans-serif,arial;
 	height: 1024px;

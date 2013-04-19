@@ -432,6 +432,10 @@ var drawTriangle = function() {
   }
 };
 
+isChrome = function() { 
+  return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+}
+
 function scrollTo(section)
 {
 	if (section){
@@ -447,8 +451,19 @@ $(document).ready(function() {
 
   $('#home').css("height", $(window).height());
   
+  console.log('browser: ' +isChrome());
+  if (isChrome()){
+		$('#tagline h1').attr('data-stellar-horizontal-offset','152');
+  }
+  else
+  {
+	   $('#tagline h1').attr('data-stellar-horizontal-offset','304');
+  }
+  
+  
   $.stellar({
-	hideDistantElements: false
+	hideDistantElements: false,
+	horizontalScrolling: false
   });  
   
   startCircularAvatars();
@@ -472,13 +487,15 @@ $(document).ready(function() {
     && this.hash.replace(/#/,'') ) {
       var $target = $(this.hash), target = this.hash;
       if (target) {
+		if (target == '#home' || target == '#method' || target == '#services' || target == '#team'){
         var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 2000, function() {
-            location.hash = target;
-          });
-        });
+			$(this).click(function(event) {
+          		event.preventDefault();
+          		$(scrollElem).animate({scrollTop: targetOffset}, 2000, 'easeInOutQuint', function() {
+            		location.hash = target;
+          		});
+        	});
+		}
       }
     }
   });
@@ -503,6 +520,8 @@ $(document).ready(function() {
   }
   
   /**/
+  
+ 
   
   
 });
