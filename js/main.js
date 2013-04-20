@@ -451,7 +451,7 @@ $(document).ready(function() {
 
   $('#home').css("height", $(window).height());
   
-  console.log('browser: ' +isChrome());
+ /* console.log('browser: ' +isChrome());
   if (isChrome()){
 		$('#tagline h1').attr('data-stellar-horizontal-offset','152');
   }
@@ -464,7 +464,7 @@ $(document).ready(function() {
   $.stellar({
 	hideDistantElements: false,
 	horizontalScrolling: false
-  });  
+  });  */
   
   startCircularAvatars();
   drawTriangle();
