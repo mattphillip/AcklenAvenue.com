@@ -451,6 +451,8 @@ $(document).ready(function() {
 
   $('#home').css("height", $(window).height());
   
+  var s = skrollr.init();
+  
  /* console.log('browser: ' +isChrome());
   if (isChrome()){
 		$('#tagline h1').attr('data-stellar-horizontal-offset','152');

@@ -10,26 +10,31 @@
 @font-face {
 	font-family: 'GothamMedium';
 	src:url('fonts/GothamHTF_Medium.ttf') format('truetype');
+	src:url('fonts/GothamHTF_Medium.otf')
 }
 
 @font-face {
 	font-family: 'HelveticaNeueRegular';
 	src:url('fonts/HelveticaNeue_Regular.ttf') format('truetype');
+	src:url('fonts/HelveticaNeue_Regular.otf');
 }
 
 @font-face {
 	font-family: 'HelveticaNeueBold';
 	src:url('fonts/HelveticaNeue_Bold.ttf') format('truetype');
+	src:url('fonts/HelveticaNeue_Bold.otf');
 }
 
 @font-face {
 	font-family: 'GothamBold';
 	src:url('fonts/GothamHTF_Bold.ttf') format('truetype');
+	src:url('fonts/GothamHTF_Bold.otf');
 }
 
 @font-face {
 	font-family: 'GothamBook';
 	src:url('fonts/GothamHTF_Book.ttf') format('truetype');
+	src:url('fonts/GothamHTF_Book.otf');
 }
 
 /* ==========================================================================
@@ -148,16 +153,6 @@
 
 .slide{
 	background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 100%;
-    min-height: 620px;
-    position: relative;
-    width: 100%;
-}
-
-.slide2{
-	/*background-attachment: fixed;*/
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: 100%;
