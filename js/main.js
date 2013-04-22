@@ -450,7 +450,6 @@ $(document).ready(function() {
   startNumberTabs();
 
   $('#home').css("height", $(window).height());
-  
   var s = skrollr.init();
   
  /* console.log('browser: ' +isChrome());
