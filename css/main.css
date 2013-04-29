@@ -227,13 +227,13 @@
 	color:#373737;
 	
 }
-#services
+#work
 {
 	background-image:url(../img/background-street.jpg);
 	font-family:'HelveticaNeueRegular',sans-serif,arial;
 }
 
-#services h1
+#work h1
 {
 	padding-top:110px;
 	margin-left:-70px;
@@ -275,34 +275,38 @@
 	top: 45%;
 }
 
-#method{
+#services{
 	margin-top:-30px;
 	background-image:url(../img/background-car-lights.jpg);
 	font-family:'HelveticaNeueRegular',sans-serif,arial;
 	height: 1024px;
 }
 
-#method .container{
+#services .title{
+	color:#FFF;
+}
+
+#services .container{
 	background-color: rgba(102,153,204, 0.4);
 	color:#FFF;
 	height:924px;
 	width:100%;
 }
 
-#method p{
+#services p{
 	font-weight:normal;
 	font-size:11pt;
 	right:30px;
 	
 }
 
-#method h1{
+#services h1{
 	padding-top:110px;
 	margin-left:-70px;
 	font-size:46pt;
 }
 
-#method h3{
+#services h3{
 	margin-left:0px;
 	font-size:20pt;
 }
