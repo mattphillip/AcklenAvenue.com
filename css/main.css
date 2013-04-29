@@ -116,8 +116,8 @@
 }
 
 .servicesContent{
-	height: 150px;
-	font-size: 20px;
+	height: auto;
+	font-size: 12pt;
 	margin-bottom: 200px;
 	line-height: 120%;	
 }
@@ -203,7 +203,7 @@
 #menu li{
 	display:inline;
 	padding: 20px 20px 20px 20px;
-	border-right: 2px solid #d9d9d9;
+	border-right: 2px solid #7d7d7d;
 	height:40px;
 }
 
@@ -213,7 +213,7 @@
 
 #menu a{
 	display:inline-block;
-	color:#d9d9d9;
+	color:#7d7d7d;
 	font-family: 'HelveticaNeueRegular',sans-serif,arial;
 	font-size:1.2em;
 	text-decoration:none;
@@ -282,8 +282,20 @@
 	height: 1024px;
 }
 
+#services .services{
+	left:25%;
+	position:relative;
+	top: 15%;
+}
+
 #services .title{
-	color:#FFF;
+	
+    color: #FFFFFF;
+    font-family: 'GothamBook',sans-serif,arial;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
 }
 
 #services .container{
@@ -302,8 +314,8 @@
 
 #services h1{
 	padding-top:110px;
-	margin-left:-70px;
-	font-size:46pt;
+	font-size:30pt;
+	text-align: center;
 }
 
 #services h3{

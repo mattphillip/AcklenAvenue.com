@@ -452,20 +452,6 @@ $(document).ready(function() {
   $('#home').css("height", $(window).height());
   var s = skrollr.init();
   
- /* console.log('browser: ' +isChrome());
-  if (isChrome()){
-		$('#tagline h1').attr('data-stellar-horizontal-offset','152');
-  }
-  else
-  {
-	   $('#tagline h1').attr('data-stellar-horizontal-offset','304');
-  }
-  
-  
-  $.stellar({
-	hideDistantElements: false,
-	horizontalScrolling: false
-  });  */
   
   startCircularAvatars();
   drawTriangle();
@@ -490,6 +476,7 @@ $(document).ready(function() {
       if (target) {
 		if (target == '#home' || target == '#method' || target == '#services' || target == '#team'){
         var targetOffset = $target.offset().top;
+		console.log('target: '+target + 'offset:' +targetOffset);
 			$(this).click(function(event) {
           		event.preventDefault();
           		$(scrollElem).animate({scrollTop: targetOffset}, 2000, 'easeInOutQuint', function() {
@@ -522,10 +509,40 @@ $(document).ready(function() {
   
   /**/
   
+  	$("#method-desc").click(function() {if($("#service-desc").is(":visible")){
+			$("#service-desc").hide("slow");
+			$("#services h1").css("text-align","right");
+			
+		}
+		else
+		{
+			$("#service-desc").show();
+			$("#services h1").css("text-align","center");
+		}
+		return false;
+	});
+
+	$("#service-desc").click(function() {
+		if($("#method-desc").is(":visible")){
+			$("#method-desc").hide("slow");
+			$("#services h1").css("text-align","left");
+			$("#services .services").show();
+		}
+		else
+		{
+			$("#method-desc").show();
+			$("#services h1").css("text-align","center");
+			$("#services .services").hide();
+		}
+		
+		return false;
+	});
+  
  
   
   
 });
+
 
 $(window).resize(function() {
   drawTriangle();
