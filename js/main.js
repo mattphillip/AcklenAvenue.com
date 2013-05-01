@@ -449,7 +449,7 @@ $(document).ready(function() {
   startGraph();
   startNumberTabs();
 
-  $('#home').css("height", $(window).height());
+ // $('#home').css("height", $(window).height());
   var s = skrollr.init();
   
   
