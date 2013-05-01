@@ -512,12 +512,14 @@ $(document).ready(function() {
   	$("#method-desc").click(function() {if($("#service-desc").is(":visible")){
 			$("#service-desc").hide("slow");
 			$("#services h1").css("text-align","right");
+			$("#services .method").show();
 			
 		}
 		else
 		{
 			$("#service-desc").show();
 			$("#services h1").css("text-align","center");
+			$("#services .method").hide();
 		}
 		return false;
 	});
@@ -526,13 +528,13 @@ $(document).ready(function() {
 		if($("#method-desc").is(":visible")){
 			$("#method-desc").hide("slow");
 			$("#services h1").css("text-align","left");
-			$("#services .services").show();
+			$("#services .service").show();
 		}
 		else
 		{
 			$("#method-desc").show();
 			$("#services h1").css("text-align","center");
-			$("#services .services").hide();
+			$("#services .service").hide();
 		}
 		
 		return false;
