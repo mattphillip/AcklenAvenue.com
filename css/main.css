@@ -230,14 +230,14 @@
 #work
 {
 	background-image:url(../img/background-street.jpg);
-	font-family:'HelveticaNeueRegular',sans-serif,arial;
+	font-family:'GothamMedium',sans-serif,arial;
 }
 
 #work h1
 {
 	padding-top:110px;
 	margin-left:-70px;
-	font-size:46pt;
+	font-size:25pt;
 }
 
 #team{
@@ -264,15 +264,19 @@
 
 #tagline h1{
 	margin: 0 auto;
-	font-size:25pt;
+	font-size:20pt;
 	text-align:left;
-	width: 600px;
+	width: 470px;
 	color:#373737;
 	font-weight:normal;
 	position:relative;
 	font-family:'GothamMedium',sans-serif,arial;
 	line-height: 105%;
 	top: 45%;
+}
+
+#tagline h1 strong{
+	font-family:'GothamBold',sans-serif,arial;
 }
 
 #services{
@@ -317,7 +321,7 @@
 #services .title{
 	
     color: #FFFFFF;
-    font-family: 'GothamBook',sans-serif,arial;
+    font-family: 'GothamMedium',sans-serif,arial;
     height: 70px;
     margin: 0 auto;
     position: relative;
@@ -340,7 +344,7 @@
 
 #services h1{
 	padding-top:110px;
-	font-size:30pt;
+	font-size:25pt;
 	text-align: center;
 }
 
