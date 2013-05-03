@@ -296,7 +296,7 @@
 #services .service{
 	left: 20%;
 	position: relative;
-	top: 25%;
+	top: -50%;
 }
 
 #services .service h2{
