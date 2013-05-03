@@ -257,10 +257,8 @@
 }
 
 #tagline{
-	/*top:-20px;*/
 	background-image:url(../img/background-window.jpg);
-	background-color: rgba(102,153,204, 0.4);
-	z-indez:5;
+	opacity: 0.8;
 }
 
 #tagline h1{
