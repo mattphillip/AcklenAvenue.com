@@ -278,6 +278,7 @@
 #services{
 	margin-top:-30px;
 	background-image:url(../img/background-car-lights.jpg);
+	background-position:center bottom;
 	font-family:'HelveticaNeueRegular',sans-serif,arial;
 	height: 1024px;
 }
@@ -342,6 +343,7 @@
 	padding-top:110px;
 	font-size:30pt;
 	text-align: center;
+	position:relative;
 }
 
 #services a{
