@@ -117,7 +117,7 @@
 
 .servicesContent{
 	height: auto;
-	font-size: 12pt;
+	font-size: 11pt;
 	margin-bottom: 200px;
 	line-height: 120%;	
 }
@@ -253,7 +253,7 @@
 }
 
 #triangle{
-	margin-bottom: -3px;
+	margin-bottom: -5px;
 }
 
 #tagline{
