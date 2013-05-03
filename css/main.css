@@ -149,7 +149,7 @@
 #home
 {
 	background-image:url(../img/background-traffic.jpg);
-	height:650px;
+	min-height:650px;;
 }
 
 .slide{
@@ -257,9 +257,10 @@
 }
 
 #tagline{
-	top:-20px;
+	/*top:-20px;*/
 	background-image:url(../img/background-window.jpg);
 	background-color: rgba(102,153,204, 0.4);
+	z-indez:5;
 }
 
 #tagline h1{
@@ -296,7 +297,7 @@
 #services .service{
 	left: 20%;
 	position: relative;
-	top: -50%;
+	top: 25%;
 }
 
 #services .service h2{

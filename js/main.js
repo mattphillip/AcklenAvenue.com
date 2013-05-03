@@ -449,7 +449,7 @@ $(document).ready(function() {
   startGraph();
   startNumberTabs();
 
- // $('#home').css("height", $(window).height());
+  $('#home').css("height", $(window).height()-100);
   var s = skrollr.init();
   
   
@@ -513,13 +513,17 @@ $(document).ready(function() {
 		if($("#service-desc").is(":visible")){
 			$("#service-desc").hide("slow");
 			$("#services h1").animate({left:400},1000);
+			$("#services .method").show();
 			$("#services .method").animate({left:-110},1000);
 		}
 		else
 		{
 			$("#service-desc").show("slow");
 			$("#services h1").animate({left:0},1000);
-			$("#services .method").animate({left:-1100},1000);
+			$("#services .method").animate({left:-1100},1000,function(){
+				$("#services .method").hide();
+			});
+			
 		}
 		return false;
 	});
@@ -528,15 +532,17 @@ $(document).ready(function() {
 		if($("#method-desc").is(":visible")){
 			$("#method-desc").hide("slow");
 			$("#services h1").animate({left:-400},1000);
-			//$("#services .service").show();
+			$("#services .service").show();
 			$("#services .service").animate({left:192},1000);
 		}
 		else
 		{
 			$("#method-desc").show("slow");
 			$("#services h1").animate({left:0},1000);
-			//$("#services .service").hide();
-			$("#services .service").animate({left:1092},1000);
+			$("#services .service").animate({left:1092},1000, function(){
+				$("#services .service").hide();
+			});
+			
 		}
 		
 		return false;
