@@ -292,19 +292,27 @@
 }
 
 #services .service{
-	left: 20%;
+	left: 25%;
 	position: relative;
-	top: 25%;
+	top: 15%;
 }
 
 #services .service h2{
-	background-color: #333333;
     color: #FFFFFF;
     display: inline;
-    font-family: "Courier New",Courier,monospace;
-    font-size: 12pt;
-    padding: 5px 10px;
+    font-family: 'GothamMedium',sans-serif,arial;
+    font-size: 15pt;
     width: auto;
+}
+
+#services .service h2 em{
+    font-size:18pt;
+}
+
+#services .service p{
+	color: #FFFFFF;
+	font-size:10pt;
+	width:600px;
 }
 
 #services .service h3{
