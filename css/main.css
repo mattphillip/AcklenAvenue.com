@@ -283,56 +283,7 @@
 	background-position:center bottom;
 	font-family:'HelveticaNeueRegular',sans-serif,arial;
 	height: 1024px;
-}
-
-#services .method{
-	left:-15%;
-	position:relative;
-	top: 30%;
-}
-
-#services .service{
-	left: 25%;
-	position: relative;
-	top: 15%;
-}
-
-#services .service h2{
-    color: #FFFFFF;
-    display: inline;
-    font-family: 'GothamMedium',sans-serif,arial;
-    font-size: 15pt;
-    width: auto;
-}
-
-#services .service h2 em{
-    font-size:18pt;
-}
-
-#services .service p{
-	color: #FFFFFF;
-	font-size:10pt;
-	width:600px;
-}
-
-#services .service h3{
-	background-color: #333333;
-    color: #FFFFFF;
-    display: inline;
-    font-family: "Courier New",Courier,monospace;
-    font-size: 10pt;
-    padding: 5px 5px;
-    width: auto;
-}
-
-#services .title{
-	
-    color: #FFFFFF;
-    font-family: 'GothamMedium',sans-serif,arial;
-    height: 70px;
-    margin: 0 auto;
-    position: relative;
-    top: 30%;
+	color: rgba(255, 255, 255, 1);
 }
 
 #services .container{
@@ -342,13 +293,6 @@
 	width:100%;
 }
 
-#services p{
-	font-weight:normal;
-	font-size:10pt;
-	right:30px;
-	color:#000000;
-}
-
 #services h1{
 	padding-top:110px;
 	font-size:25pt;
@@ -356,11 +300,54 @@
 	position:relative;
 }
 
-#services a{
-	color: #FFF;
+.method{
+	left:-15%;
+	position:relative;
+	top: 30%;
 }
 
-#services h3{
-	margin-left:0px;
-	font-size:20pt;
+.service{
+	left: 25%;
+	position: relative;
+	top: 15%;
 }
+
+.service a{
+	color:rgb(255,255,255);
+	text-decoration:none;
+}
+
+.service a:hover{
+	color:rgb(255,255,255);
+}
+
+.service a.notActive{
+	color:rgba(255,255,255,0.8);
+}
+
+.service h2{
+	display: inline;
+    font-family: 'GothamMedium',sans-serif,arial;
+    font-size: 15pt;
+    width: auto;
+}
+
+.service p{
+	color: rgba(255, 255, 255, 1);
+	font-size:10pt;
+	width:600px;
+}
+
+.serviceTitle{
+    color: #FFFFFF;
+    font-family: 'GothamMedium',sans-serif,arial;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+}
+
+.serviceTitle a{
+	color:rgb(255,255,255);
+}
+

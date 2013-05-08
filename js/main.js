@@ -192,6 +192,45 @@ $(document).ready(function() {
   
   startScroll();
   
+  $("#agile-consulting-title").click(function(){
+	  $("#custom-software-desc").hide("slow");
+	  $("#custom-software-title").addClass("notActive");
+	  
+	  $("#nearshore-desc").hide("slow");
+	  $("#nearshore-title").addClass("notActive");
+	  
+	  $("#agile-consulting-desc").show("slow");
+	  $("#agile-consulting-title").removeClass("notActive");
+	  return false;
+  });
+  
+  $("#custom-software-title").click(function(){
+	  $("#agile-consulting-desc").hide("slow");
+	  $("#agile-consulting-title").addClass("notActive");
+	  
+	  $("#nearshore-desc").hide("slow");
+	  $("#nearshore-title").addClass("notActive");
+	  
+	  $("#custom-software-desc").show("slow");
+	  $("#custom-software-title").removeClass("notActive");
+	  return false;
+  });
+  
+  $("#nearshore-title").click(function(){
+	  $("#agile-consulting-desc").hide("slow");
+	  $("#agile-consulting-title").addClass("notActive");
+	  
+	  $("#custom-software-desc").hide("slow");
+	  $("#custom-software-title").addClass("notActive");
+	  
+	  $("#nearshore-desc").show("slow");
+	  $("#nearshore-title").removeClass("notActive");
+	  return false;
+  });
+  
+  $("#agile-consulting-desc").show();
+  $("#custom-software-desc").hide();
+  $("#nearshore-desc").hide();
   
   startMethodEffect();
   startServiceEffect();
