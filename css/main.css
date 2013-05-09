@@ -236,7 +236,7 @@
 #work h1
 {
 	padding-top:110px;
-	margin-left:-70px;
+	/*margin-left:-70px;*/
 	font-size:25pt;
 }
 
@@ -369,5 +369,25 @@
 
 .serviceTitle a{
 	color:rgb(255,255,255);
+}
+
+.workContentTitle{
+	border-bottom:2px solid #069;
+	padding-bottom:5px;
+	font-family: 'GothamBook',sans-serif,arial;
+	color:#666;
+}
+
+.workContentParagraph{
+	font-family: 'GothamBook',sans-serif,arial;
+	font-size:10pt;
+	color:#666;
+	padding-bottom:20px;
+}
+
+.workImagePreview{
+	width:170px;
+	height:160px;
+	background-color:#CCC;
 }
 
