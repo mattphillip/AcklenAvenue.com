@@ -142,7 +142,7 @@ startMethodEffect = function(){
 			$("#service-desc").hide("slow");
 			$("#services h1").animate({left:400},1000);
 			$("#services .method").show();
-			$("#services .method").animate({left:-110},1000);
+			$("#services .method").animate({left:130},1000);
 		}
 		else
 		{
@@ -179,20 +179,8 @@ startServiceEffect = function(){
 	});
 }
 
-$(document).ready(function() {
- // startGraph();
-  startNumberTabs();
-
-  $('#home').css("height", $(window).height()-100);
-  var s = skrollr.init();
-  
-  
-  startCircularAvatars();
-  drawTriangle();
-  
-  startScroll();
-  
-  $("#agile-consulting-title").click(function(){
+startServiceContentEffect = function(){
+	$("#agile-consulting-title").click(function(){
 	  $("#custom-software-desc").hide("slow");
 	  $("#custom-software-title").addClass("notActive");
 	  
@@ -231,6 +219,127 @@ $(document).ready(function() {
   $("#agile-consulting-desc").show();
   $("#custom-software-desc").hide();
   $("#nearshore-desc").hide();
+}
+
+startMethodContentEffect = function(){
+	$("#project-about-title").click(function(){
+	  $("#which-piece-desc").hide("slow");
+	  $("#which-piece-title").addClass("notActive");
+	  
+	  $("#continous-feedback-desc").hide("slow");
+	  $("#continous-feedback-title").addClass("notActive");
+	  
+	  $("#wanted-desc").hide("slow");
+	  $("#wanted-title").addClass("notActive");
+	  
+	  $("#functionality-desc").hide("slow");
+	  $("#functionality-title").addClass("notActive");
+	  
+	  $("#project-about-desc").show("slow");
+	  $("#project-about-title").removeClass("notActive");
+	  return false;
+  });
+  
+  $("#which-piece-title").click(function(){
+	  $("#project-about-desc").hide("slow");
+	  $("#project-about-title").addClass("notActive");
+	  
+	  $("#continous-feedback-desc").hide("slow");
+	  $("#continous-feedback-title").addClass("notActive");
+	  
+	  $("#wanted-desc").hide("slow");
+	  $("#wanted-title").addClass("notActive");
+	  
+	  $("#functionality-desc").hide("slow");
+	  $("#functionality-title").addClass("notActive");
+	  
+	  
+	  $("#which-piece-desc").show("slow");
+	  $("#which-piece-title").removeClass("notActive");
+	  return false;
+  });
+  
+  $("#continous-feedback-title").click(function(){
+	  $("#project-about-desc").hide("slow");
+	  $("#project-about-title").addClass("notActive");
+	  
+	  $("#which-piece-desc").hide("slow");
+	  $("#which-piece-title").addClass("notActive");
+	  
+	  $("#wanted-desc").hide("slow");
+	  $("#wanted-title").addClass("notActive");
+	  
+	  $("#functionality-desc").hide("slow");
+	  $("#functionality-title").addClass("notActive");
+	  
+	  $("#continous-feedback-desc").show("slow");
+	  $("#continous-feedback-title").removeClass("notActive");
+	  
+	  return false;
+  });
+  
+  $("#wanted-title").click(function(){
+	  $("#project-about-desc").hide("slow");
+	  $("#project-about-title").addClass("notActive");
+	  
+	  $("#which-piece-desc").hide("slow");
+	  $("#which-piece-title").addClass("notActive");
+	  
+	  $("#continous-feedback-desc").hide("slow");
+	  $("#continous-feedback-title").addClass("notActive");
+	  
+	  $("#functionality-desc").hide("slow");
+	  $("#functionality-title").addClass("notActive");
+	  
+	  $("#wanted-desc").show("slow");
+	  $("#wanted-title").removeClass("notActive");
+	  return false;
+  });
+  
+  $("#functionality-title").click(function(){
+	  $("#project-about-desc").hide("slow");
+	  $("#project-about-title").addClass("notActive");
+	  
+	  $("#which-piece-desc").hide("slow");
+	  $("#which-piece-title").addClass("notActive");
+	  
+	  $("#continous-feedback-desc").hide("slow");
+	  $("#continous-feedback-title").addClass("notActive");
+	  
+	  $("#wanted-desc").hide("slow");
+	  $("#wanted-title").addClass("notActive");
+	  
+	  $("#functionality-desc").show("slow");
+	  $("#functionality-title").removeClass("notActive");
+	  return false;
+  });
+  
+  
+  
+  $("#continous-feedback-desc").show();
+  $("#functionality-desc").hide();
+  $("#wanted-desc").hide();
+  $("#which-piece-desc").hide();
+  $("#project-about-desc").hide();
+}
+
+$(document).ready(function() {
+ // startGraph();
+  startNumberTabs();
+
+  $('#home').css("height", $(window).height()-100);
+  var s = skrollr.init();
+  
+  
+  startCircularAvatars();
+  drawTriangle();
+  
+  startScroll();
+  
+  startServiceContentEffect();
+  startMethodContentEffect();
+  
+  
   
   startMethodEffect();
   startServiceEffect();

@@ -301,9 +301,32 @@
 }
 
 .method{
+	text-align:right;
 	left:-15%;
 	position:relative;
-	top: 30%;
+	top: 15%;
+}
+
+.method a{
+	color:rgb(255,255,255);
+	text-decoration:none;
+}
+
+.method a.notActive{
+	color:rgba(255,255,255,0.8);
+}
+
+.method h2{
+	display: inline;
+    font-family: 'GothamMedium',sans-serif,arial;
+    font-size: 15pt;
+    width: auto;
+}
+
+.method p{
+	color: rgba(255, 255, 255, 1);
+	font-size:10pt;
+	width:600px;
 }
 
 .service{
@@ -317,9 +340,6 @@
 	text-decoration:none;
 }
 
-.service a:hover{
-	color:rgb(255,255,255);
-}
 
 .service a.notActive{
 	color:rgba(255,255,255,0.8);
