@@ -314,6 +314,11 @@
 
 .method a.notActive{
 	color:rgba(255,255,255,0.8);
+	margin-bottom:30px;
+}
+
+.method a.notActive:hover{
+	color:rgba(255,255,255,1);
 }
 
 .method h2{
@@ -326,7 +331,9 @@
 .method p{
 	color: rgba(255, 255, 255, 1);
 	font-size:10pt;
-	width:600px;
+	width:470px;
+	line-height:normal;
+	margin-bottom:30px;
 }
 
 .service{
@@ -340,9 +347,12 @@
 	text-decoration:none;
 }
 
-
 .service a.notActive{
 	color:rgba(255,255,255,0.8);
+}
+
+.service a.notActive:hover{
+	color:rgba(255,255,255,1);
 }
 
 .service h2{
@@ -383,6 +393,7 @@
 	font-size:10pt;
 	color:#666;
 	padding-bottom:20px;
+	line-height:10px;
 }
 
 .workImagePreview{
