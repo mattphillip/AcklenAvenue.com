@@ -456,3 +456,33 @@
     margin-left: 135px;
 }
 
+.workImageDetailPreview{
+	background-color: rgb(204, 204, 204); 
+	width: 140px; 
+	height: 90px; 
+	margin-bottom: 20px; 
+	margin-top: 10px;
+}
+
+.workImage{
+	background-color: rgb(204, 204, 204); 
+	width: 300px; 
+	height: 150px; 
+	margi
+}
+
+.workDetailContent{
+	font-size:10pt;
+	font-family:"Times New Roman", Times, serif;
+}
+
+.workDetailTitle{
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	font-size: 12pt;
+}
+
+.modal-body{
+    max-height:450px;
+}
+
