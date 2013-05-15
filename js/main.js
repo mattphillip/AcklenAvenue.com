@@ -163,7 +163,7 @@ startServiceEffect = function(){
 			$("#method-desc").hide("slow");
 			$("#services h1").animate({left:-400},1000);
 			$("#services .service").show();
-			$("#services .service").animate({left:250},1000);
+			$("#services .service").animate({left:350},1000);
 		}
 		else
 		{
