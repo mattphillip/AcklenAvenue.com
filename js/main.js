@@ -142,7 +142,7 @@ startMethodEffect = function(){
 			$("#service-desc").hide("slow");
 			$("#services h1").animate({left:400},1000);
 			$("#services .method").show();
-			$("#services .method").animate({left:130},1000);
+			$("#services .method").animate({left:230},1000);
 		}
 		else
 		{
