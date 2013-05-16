@@ -89,8 +89,8 @@
 }
 
 .circular{
-	width: 250px;
-	height: 250px;
+	width: 220px;
+	height: 220px;
 	border-radius: 125px;
 	-webkit-border-radius: 125px;
 	-moz-border-radius: 125px;
@@ -98,8 +98,8 @@
 }
 
 .circularGray{
-	width: 250px;
-	height: 250px;
+	width: 220px;
+	height: 220px;
 	border-radius: 125px;
 	-webkit-border-radius: 125px;
 	-moz-border-radius: 125px;
@@ -151,8 +151,8 @@
 }
 
 .small{
-	width: 170px;
-	height: 170px;
+	width: 150px;
+	height: 150px;
 	border-radius: 85px;
 	-webkit-border-radius: 85px;
 	-moz-border-radius: 85px;
@@ -476,14 +476,13 @@
 	width: 140px; 
 	height: 90px; 
 	margin-bottom: 20px; 
-	margin-top: 10px;
+	margin-top: 0px;
 }
 
 .workImage{
-	background-color: rgb(204, 204, 204); 
-	width: 300px; 
-	height: 150px; 
-	margi
+	background-color: #666; 
+	width: 460px; 
+	height: 250px; 
 }
 
 .workDetailContent{
@@ -497,7 +496,22 @@
 	font-size: 12pt;
 }
 
+.workDetailTitleNoBorder{
+	font-size: 12pt;
+}
+
 .modal-body{
-    max-height:450px;
+    max-height:500px;
+}
+
+body .modal {
+    /* new custom width */
+    width: 700px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -360px;
+}
+
+.modal.fade.in {
+    top: 7%;
 }
 
