@@ -103,7 +103,7 @@ startScroll = function(){
     && this.hash.replace(/#/,'') ) {
       var $target = $(this.hash), target = this.hash;
       if (target) {
-		if (target == '#home' || target == '#work' || target == '#services' || target == '#team'){
+		if (target == '#home' || target == '#work' || target == '#services' || target == '#team' || target == '#contact'){
         var targetOffset = $target.offset().top;
 		console.log('target: '+target + 'offset:' +targetOffset);
 			$(this).click(function(event) {
