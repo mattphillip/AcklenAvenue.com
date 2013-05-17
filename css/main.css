@@ -532,7 +532,8 @@ body .modal {
 
 #contact{
 	background-image:url(../img/contact-background.jpg);
-	height: 753px;
+	background-size:cover;
+	height:670px;
 }
 
 #contact .container{
