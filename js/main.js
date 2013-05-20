@@ -339,6 +339,33 @@ $(document).ready(function() {
   startServiceContentEffect();
   startMethodContentEffect();
   
+ 
+  $("#blog-anchor").click(function(){
+	  if($("#blog").is(":visible")){
+		  $("#blog").hide( {duration: "slow", easing:"swing"} );
+		  $("#home").show("slow");
+		  $("#services").show("slow");
+		  $("#work").show("slow");
+		  $("#team").show("slow");
+		  $("#contact").show("slow");
+		  $("#tagline").show("slow");
+		  $("#ModalPopups").show("slow");
+		  
+	  }
+	  else
+	  {
+		  $("#home").hide("slow");
+		  $("#services").hide("slow");
+		  $("#work").hide("slow");
+		  $("#team").hide("slow");
+		  $("#contact").hide("slow");
+		  $("#tagline").hide("slow");
+		  $("#ModalPopups").hide("slow");
+		  $("#blog").show( {duration: "slow", easing:"swing"} );
+		  
+	  }
+	  return false;
+  });
   
   
   startMethodEffect();
