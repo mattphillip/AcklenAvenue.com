@@ -187,6 +187,13 @@
 
 }
 
+#blog{
+	left:1600px;
+	position:absolute;
+	float:right;
+	padding-top:200px;
+}
+
 
 #home
 {

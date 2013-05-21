@@ -103,14 +103,23 @@ startScroll = function(){
     && this.hash.replace(/#/,'') ) {
       var $target = $(this.hash), target = this.hash;
       if (target) {
+		  console.log('target: '+target);
 		if (target == '#home' || target == '#work' || target == '#services' || target == '#team' || target == '#contact'){
-        var targetOffset = $target.offset().top;
-		console.log('target: '+target + 'offset:' +targetOffset);
+        console.log('paso target: '+target);
+	    var targetOffsetTop = $target.offset().top;
+		var targetOffsetRight = $target.offset().right;
+		//console.log('target: '+target + 'offset:' +targetOffset);
 			$(this).click(function(event) {
           		event.preventDefault();
-          		$(scrollElem).animate({scrollTop: targetOffset}, 2000, 'easeInOutQuint', function() {
+				
+				/*$(scrollElem).animate({scrollRight: targetOffsetRight}, 2000, 'easeInOutQuint', function() {
             		location.hash = target;
           		});
+          		$(scrollElem).animate({scrollTop: targetOffsetTop}, 2000, 'easeInOutQuint', function() {
+            		location.hash = target;
+          		});*/
+				$(scrollElem).animate({scrollRight: targetOffsetRight}, 2000);
+          		$(scrollElem).animate({scrollTop: targetOffsetTop}, 2000);
         	});
 		}
       }
@@ -334,36 +343,47 @@ $(document).ready(function() {
   startCircularAvatars();
   drawTriangle();
   
-  startScroll();
+  //startScroll();
   
   startServiceContentEffect();
   startMethodContentEffect();
   
+  
  
-  $("#blog-anchor").click(function(){
-	  if($("#blog").is(":visible")){
-		  $("#blog").hide( {duration: "slow", easing:"swing"} );
-		  $("#home").show("slow");
-		  $("#services").show("slow");
-		  $("#work").show("slow");
-		  $("#team").show("slow");
-		  $("#contact").show("slow");
-		  $("#tagline").show("slow");
-		  $("#ModalPopups").show("slow");
-		  
-	  }
-	  else
-	  {
-		  $("#home").hide("slow");
-		  $("#services").hide("slow");
-		  $("#work").hide("slow");
-		  $("#team").hide("slow");
-		  $("#contact").hide("slow");
-		  $("#tagline").hide("slow");
-		  $("#ModalPopups").hide("slow");
-		  $("#blog").show( {duration: "slow", easing:"swing"} );
-		  
-	  }
+  $("#blog-menu").click(function(){
+	  $('html, body').animate({scrollTop: $("#blog").offset().top}, 2000);
+      $('html, body').animate({scrollLeft: $("#blog").offset().left}, 800);
+	  return false;
+  });
+  
+  $("#home-menu").click(function(){
+	   $('html, body').animate({scrollLeft: -$("#home").offset().left}, 800);
+	  $('html, body').animate({scrollTop: $("#home").offset().top}, 2000);
+     
+	  return false;
+  });
+  
+  $("#services-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, 800);
+	  $('html, body').animate({scrollTop: $("#services").offset().top}, 2000);
+	  return false;
+  });
+  
+  $("#work-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, 800);
+	  $('html, body').animate({scrollTop: $("#work").offset().top}, 2000);
+	  return false;
+  });
+  
+  $("#team-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, 800);
+	  $('html, body').animate({scrollTop: $("#team").offset().top}, 2000);
+	  return false;
+  });
+  
+  $("#contact-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, 800);
+	  $('html, body').animate({scrollTop: $("#contact").offset().top}, 2000);
 	  return false;
   });
   

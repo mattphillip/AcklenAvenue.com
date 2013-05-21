@@ -22,17 +22,17 @@
 <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
 <nav id="menu">
-  <li> <a  href="#home">home</a></li>
-  <li> <a  href="#services">services</a></li>
-  <li> <a  href="#work">work</a></li>
-  <li> <a  href="#team">team</a></li>
-  <li> <a id="blog-anchor"  href="#blog">blog</a></li>
-  <li> <a  href="#contact">contact</a></li>
+  <li> <a id="home-menu"   href="#home">home</a></li>
+  <li> <a id="services-menu" href="#services">services</a></li>
+  <li> <a id="work-menu"  href="#work">work</a></li>
+  <li> <a id="team-menu"  href="#team">team</a></li>
+  <li> <a id="blog-menu"  href="#blog">blog</a></li>
+  <li> <a id="contact-menu"  href="#contact">contact</a></li>
 </nav>
 
-<section id="blog" style="display:none; padding-top: 200px;" >
+<section id="blog" >
 	<div class="container">
-    	<div class="row">
+    	<div class="row" style="margin-left: -200px;">
         	<div class="span3">
             	<h3>CATEGORIES</h3>
                 <ul>
@@ -369,8 +369,11 @@
       	</div>
    	</div>
 </section>
-<script src="js/vendor/jquery-1.9.1.min.js"></script> 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="js/vendor/jquery-ui-1.10.2.custom.min.js"></script> 
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+<!--<script src="js/vendor/jquery-1.9.1.min.js"></script> -->
 <script src="js/vendor/highcharts.js"></script> 
 <!--<script src="js/vendor/jquery.stellar.min.js"></script>--> 
 <script src="js/vendor/skrollr.min.js"></script> 
