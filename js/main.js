@@ -351,39 +351,39 @@ $(document).ready(function() {
   
  
   $("#blog-menu").click(function(){
-	  $('html, body').animate({scrollTop: $("#blog").offset().top}, 2000);
-      $('html, body').animate({scrollLeft: $("#blog").offset().left}, 800);
+	  $('html, body').animate({scrollTop: $("#blog").offset().top}, "slow");
+      $('html, body').animate({scrollLeft: $("#blog").offset().left}, "fast");
 	  return false;
   });
   
   $("#home-menu").click(function(){
-	   $('html, body').animate({scrollLeft: -$("#home").offset().left}, 800);
-	  $('html, body').animate({scrollTop: $("#home").offset().top}, 2000);
+	   $('html, body').animate({scrollLeft: -$("#home").offset().left}, "fast");
+	  $('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
      
 	  return false;
   });
   
   $("#services-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, 800);
-	  $('html, body').animate({scrollTop: $("#services").offset().top}, 2000);
+	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "fast");
+	  $('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
 	  return false;
   });
   
   $("#work-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, 800);
-	  $('html, body').animate({scrollTop: $("#work").offset().top}, 2000);
+	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "fast");
+	  $('html, body').animate({scrollTop: $("#work").offset().top}, "slow");
 	  return false;
   });
   
   $("#team-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, 800);
-	  $('html, body').animate({scrollTop: $("#team").offset().top}, 2000);
+	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "fast");
+	  $('html, body').animate({scrollTop: $("#team").offset().top}, "slow");
 	  return false;
   });
   
   $("#contact-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, 800);
-	  $('html, body').animate({scrollTop: $("#contact").offset().top}, 2000);
+	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "fast");
+	  $('html, body').animate({scrollTop: $("#contact").offset().top}, "slow");
 	  return false;
   });
   
