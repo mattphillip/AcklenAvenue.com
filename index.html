@@ -71,73 +71,129 @@
             	<h2 style="padding-left: 15px;">ACKLEN AVENUE BLOG</h2>
                 <div class="span8 blogResume">
                     <div class="span2">
-                        <div class="blogResumeImage">
-                        </div>
+                        <img src="img/blog/prison-mime-300x225.jpeg" class="blogResumeImage"/>
                     </div>
                     <div class="span5">
-                        <h3 class="blogResumeTitle"><a id="blogTitle1"  href="">BLOG TITLE1</a></h3>
+                        <h3 class="blogResumeTitle"><a id="blogTitle1"  href="">Constraining Mocks with Expression Arguments</a></h3>
                         <ul class="blogResumeMetaData">
-                            <li>March 22nd, 2013</li>
-                            <li>Colin</li>
-                            <li>3 Comments</li>
+                            <li>April 24, 2013</li>
+                            <li>Byron</li>
+                            <li>0 Comments</li>
                         </ul>
                         <p class="blogResumeDescription">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet molestie lacus eget bibendum. Quisque convallis dictum quam. Donec neque lacus, lacinia a cursus sed, interdum in sapien. Donec gravida eros eget orci lacinia rhoncus. Suspendisse felis nibh, mattis vel ultricies at, tempor pharetra elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum semper mi, at rhoncus diam congue a. 
+                            I work with a team of talented developers who adhere to the <a href="http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd">“Three Rules of TDD”</a> which are:
                         </p>
+                            <ol>
+                                <li><strong>You are not allowed to write any production code unless it is to make a failing unit test pass.</strong></li>
+                                <li><strong>You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.</strong></li>
+                                <li><strong>You are not allowed to write any more production code than is sufficient to pass the one failing unit test.</strong></li>
+                            </ol>
+                        
+
                     </div>
                 </div>
 
-                <div class="span8 blogResume">
-                    <div class="span2">
-                        <div class="blogResumeImage">
-                        </div>
-                    </div>
-                    <div class="span5">
-                        <h3 class="blogResumeTitle">BLOG TITLE</h3>
-                        <ul class="blogResumeMetaData">
-                            <li>March 22nd, 2013</li>
-                            <li>Colin</li>
-                            <li>3 Comments</li>
-                        </ul>
-                        <p class="blogResumeDescription">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet molestie lacus eget bibendum. Quisque convallis dictum quam. Donec neque lacus, lacinia a cursus sed, interdum in sapien. Donec gravida eros eget orci lacinia rhoncus. Suspendisse felis nibh, mattis vel ultricies at, tempor pharetra elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum semper mi, at rhoncus diam congue a. 
-                        </p>
-                    </div>
-                </div>
-
-                <div class="span8 blogResume">
-                    <div class="span2">
-                        <div class="blogResumeImage">
-                        </div>
-                    </div>
-                    <div class="span5">
-                        <h3 class="blogResumeTitle">BLOG TITLE</h3>
-                        <ul class="blogResumeMetaData">
-                            <li>March 22nd, 2013</li>
-                            <li>Colin</li>
-                            <li>3 Comments</li>
-                        </ul>
-                        <p class="blogResumeDescription">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet molestie lacus eget bibendum. Quisque convallis dictum quam. Donec neque lacus, lacinia a cursus sed, interdum in sapien. Donec gravida eros eget orci lacinia rhoncus. Suspendisse felis nibh, mattis vel ultricies at, tempor pharetra elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum semper mi, at rhoncus diam congue a. 
-                        </p>
-                    </div>
-                </div>
+               
 
                 <div id="blogDetail" class="span8 blogDetail">
-                    <div class="blogDetailImage">
-                    </div>
-                    <h3 class="blogDetailTitle">BLOG TITLE</h3>
+                    <img src="img/blog/prison-mime-300x225.jpeg" class="blogDetailImage"/>
+
+                    <h3 class="blogDetailTitle">Constraining Mocks with Expression Arguments</h3>
                     <ul class="blogResumeMetaData">
                         <li>March 22nd, 2013</li>
-                        <li>Colin</li>
-                        <li>3 Comments</li>
+                        <li>Byron</li>
+                        <li>0 Comments</li>
                     </ul>
                     <p class="blogDetailDescription">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet molestie lacus eget bibendum. Quisque convallis dictum quam. Donec neque lacus, lacinia a cursus sed, interdum in sapien. Donec gravida eros eget orci lacinia rhoncus. Suspendisse felis nibh, mattis vel ultricies at, tempor pharetra elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum semper mi, at rhoncus diam congue a. 
+                            I work with a team of talented developers who adhere to the <a href="http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd">“Three Rules of TDD”</a> which are:
                     </p>
+
+                    <ol>
+                                <li><strong>You are not allowed to write any production code unless it is to make a failing unit test pass.</strong></li>
+                                <li><strong>You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.</strong></li>
+                                <li><strong>You are not allowed to write any more production code than is sufficient to pass the one failing unit test.</strong></li>
+                            </ol>
+
+                            <p class="blogDetailDescription">
+                                To adhere to those three rules, we use various tools and frameworks that help us write appropriately-failing tests before writing the production code that make the same tests pass. One of those excellent tools is a mocking framework. Mocking allows us to take advantage of polymorphism and abstraction, creating “pretend” implementations of our dependencies so that our unit tests stay “unit tests”… only testing one small section of code at-a-time.
+                            </p>
+
+                            <p class="blogDetailDescription">
+                                One area where we constantly run into issues is when we are mocking a dependency that takes a complex argument like an “Expression”. Expressions and Funcs are really useful because they allow you to write code that gets executed later on. However, Expressions and Funcs are especially hard to mock. Not impossible… just hard.
+                            </p>
+
+                            <p class="blogDetailDescription">
+                                Here’s an example of one such dependency:
+                            </p>
+
+                    <script src="https://gist.github.com/bsommardahl/5455236.js"></script>
+
                     <p class="blogDetailDescription">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet molestie lacus eget bibendum. Quisque convallis dictum quam. Donec neque lacus, lacinia a cursus sed, interdum in sapien. Donec gravida eros eget orci lacinia rhoncus. Suspendisse felis nibh, mattis vel ultricies at, tempor pharetra elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean fermentum semper mi, at rhoncus diam congue a. 
+                            Every time I find myself mentoring another developer in mocking techniques, inevitably we arrive at a “query” method like this. A query method on a repository is very useful to the code that consumes it, but it’s not very straightforward when mocking. Here’s a test I’m working on right now:
                     </p>
+
+                    <script src="https://gist.github.com/bsommardahl/5455406.js"></script>
+
+                    <p class="blogDetailDescription">
+                        Problem with this test is the way I’m setting up my Query method. This will not work. Do some google searching to find out why… out of scope for this article. HOWEVER, the way I’m doing this is expressive and makes sense. I need something that works and reads well.
+                    </p>
+
+                    <p class="blogDetailDescription">
+                        Many of the examples on the web take the “easy way out” and lift any constraints on the mock… here’s an example using Moq:
+                    </p>
+
+                    <script src="https://gist.github.com/bsommardahl/5455274.js"></script>
+
+                    <p class="blogDetailDescription">
+                        Trouble is, that breaks rule #1: “You are not allowed to write any production code unless it is to make a failing unit test pass.” Because the test doesn’t care what you pass in to your query method, your production query actually goes uncovered by the test… you just wrote production code that didn’t actually cause a unit test to pass or fail.
+                        </p>
+
+                        <p class="blogDetailDescription">
+                            In order to properly constrain a mocked method like this, you need to test the expression against actual objects to see whether or not the expression returns true or false… in order words, you need to find out if the given expression “matches”. For example, here’s how I’ve mocked a query like this in the past:
+                        </p>
+
+                        <script src="https://gist.github.com/bsommardahl/5455299.js"></script>
+
+                        <p class="blogDetailDescription">
+                            This works okay for simple queries. But it is ugly and unexpressive and doesn’t really handle things that you DON’T want… only what you DO want. So, then you have to feed some objects that you don’t expect to match… at this point we’re need to capture the expression at runtime and run it against a list of objects. Here’s an example:
+                        </p>
+
+                        <script src="https://gist.github.com/bsommardahl/5455476.js"></script>
+
+                        <p class="blogDetailDescription">
+                            Messy. First off, we have an extra test obsevation JUST to test the runtime expression. But, I don’t want to TEST the expression! I simply want to constrain the mock method so that it only returns the expected objects IF the right expression is passed in. Secondly,  my test is harder to understand because of the list of unexpreissive test objects.
+                        </p>
+
+                        <p class="blogDetailDescription">
+                            Time for something different. How’s this look?
+                        </p>
+
+                        <script src="https://gist.github.com/bsommardahl/5455505.js"></script>
+
+                        <p class="blogDetailDescription">
+                            Here’s the finished test:
+                        </p>
+
+                        <script src="https://gist.github.com/bsommardahl/5455512.js"></script>
+
+                        <p class="blogDetailDescription">
+                            Now, my test is looking better. I’m back to constraining my mock instead of testing a runtime argument. Also, the “fluent” flow is quite a bit more expressive. It almost reads like plain english. I think I’ll have an easier time explaining this to others using this form.
+                        </p>
+
+                        <p class="blogDetailDescription">
+                            If you like it, feel free to use it! You can either copy the code from github or just install a nuget package. My code uses <a href="https://code.google.com/p/moq/">Moq Mocking Framework</a>. But I’m sure you could adapt this to your favorite mocking framework with a few minor changes.
+                        </p>
+
+                        <div class="nuget-badge">
+                            <p>
+                                <code>PM> Install-Package AcklenAvenue.Testing.Moq </code>
+                            </p>
+                        </div>
+
+                        <p class="blogDetailDescription">
+                            You can also check out the source code at <a href="https://github.com/AcklenAvenue/AcklenAvenue.Testing/tree/master/src/AcklenAvenue.Testing.Moq">Github</a>. If you’d like to improve the code, feel free to submit a pull request! Enjoy!
+                        </p>
+
                 </div>
 
             </div>
