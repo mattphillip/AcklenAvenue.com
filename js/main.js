@@ -1,28 +1,4 @@
 
-var startNumberTabs = function() {
-  $('.number').click(function() {
-    if ($(this).css("color") != "rgb(123, 177, 215)") {
-      $('.number').css("color", "black");
-      $('.binary').hide("blind", {
-        direction: "horizontal"
-      }, 500);
-      $('.ntWrapper').hide("blind", {
-        direction: "horizontal"
-      }, 500);
-      $(this).css("color", "#7BB1D7");
-      $(this).prev().show("blind", {
-        direction: "horizontal"
-      }, 500);
-      $(this).next().show("blind", {
-        direction: "horizontal"
-      }, 500);
-    }
-
-  });
-  $($('.number')[0]).click();
-};
-
-
 var startCircularAvatars = function() {
   $(".circularGray").hover(function() {
     $(this).stop().animate({
@@ -74,76 +50,51 @@ var drawTriangle = function() {
   }
 };
 
-isChrome = function() { 
-  return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-}
-
-function scrollTo(section)
-{
-	if (section){
-		var sectionOffset = $(section).offset();
-		$('html, body').animate({scrollTop: sectionOffset.top }, 2000);
-	}
-	
-};
 
 startScroll = function(){
-	function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
-  }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
- 
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-		  console.log('target: '+target);
-		if (target == '#home' || target == '#work' || target == '#services' || target == '#team' || target == '#contact'){
-        console.log('paso target: '+target);
-	    var targetOffsetTop = $target.offset().top;
-		var targetOffsetRight = $target.offset().right;
-		//console.log('target: '+target + 'offset:' +targetOffset);
-			$(this).click(function(event) {
-          		event.preventDefault();
-				
-				/*$(scrollElem).animate({scrollRight: targetOffsetRight}, 2000, 'easeInOutQuint', function() {
-            		location.hash = target;
-          		});
-          		$(scrollElem).animate({scrollTop: targetOffsetTop}, 2000, 'easeInOutQuint', function() {
-            		location.hash = target;
-          		});*/
-				$(scrollElem).animate({scrollRight: targetOffsetRight}, 2000);
-          		$(scrollElem).animate({scrollTop: targetOffsetTop}, 2000);
-        	});
-		}
-      }
-    }
+	$("#blog-menu").click(function(){
+	  	if ($('html,body').scrollTop() != $("#blog").offset().top) {
+	  		$('html, body').animate({scrollTop: $("#blog").offset().top}, "slow");
+	  	};
+      	$('html, body').animate({scrollLeft: $("#blog").offset().left}, "slow");
+
+      	if ($("#blogDetail").is(":visible")) {
+      		$("#blogDetail").hide();
+			$(".span8 .blogResume").show();
+      	};
+		
+	  	return false;
+  	});
+  
+  $("#home-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
+	  $('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
+	  return false;
   });
- 
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
-        }
-      }
-    }
-    return [];
-  }
+  
+  $("#services-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
+	  $('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
+	  return false;
+  });
+  
+  $("#work-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "slow");
+	  $('html, body').animate({scrollTop: $("#work").offset().top}, "slow");
+	  return false;
+  });
+  
+  $("#team-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "slow");
+	  $('html, body').animate({scrollTop: $("#team").offset().top}, "slow");
+	  return false;
+  });
+  
+  $("#contact-menu").click(function(){
+	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "slow");
+	  $('html, body').animate({scrollTop: $("#contact").offset().top}, "slow");
+	  return false;
+  });
 }
 
 startMethodEffect = function(){
@@ -333,69 +284,36 @@ startMethodContentEffect = function(){
   $("#project-about-desc").hide();
 }
 
-$(document).ready(function() {
- // startGraph();
-  startNumberTabs();
-
-  $('#home').css("height", $(window).height()-100);
-  var s = skrollr.init();
-  
-  
-  startCircularAvatars();
-  drawTriangle();
-  
-  //startScroll();
-  
-  startServiceContentEffect();
-  startMethodContentEffect();
-  
-  
- 
-  $("#blog-menu").click(function(){
-	  $('html, body').animate({scrollTop: $("#blog").offset().top}, "slow");
-      $('html, body').animate({scrollLeft: $("#blog").offset().left}, "slow");
-	  return false;
-  });
-  
-  $("#home-menu").click(function(){
-	   $('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
-     
-	  return false;
-  });
-  
-  $("#services-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
-	  return false;
-  });
-  
-  $("#work-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#work").offset().top}, "slow");
-	  return false;
-  });
-  
-  $("#team-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#team").offset().top}, "slow");
-	  return false;
-  });
-  
-  $("#contact-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#contact").offset().top}, "slow");
-	  return false;
-  });
-  
-  $('#archive>li>a').click(function(){
+var startArchiveToggle = function(){
+	$('#archive>li>a').click(function(){
         $(this).next('ul').slideToggle();
 		return false;
   });
+}
+
+$(document).ready(function() {
+ 
+  $('#home').css("height", $(window).height()-100);
   
+  var s = skrollr.init();
   
+  startCircularAvatars();
+  drawTriangle();
+  startScroll();
+  startServiceContentEffect();
+  startMethodContentEffect();
+  startArchiveToggle();
   startMethodEffect();
   startServiceEffect();
+
+ $("#blogDetail").hide();
+
+ $("#blogTitle1").click(function(){
+ 	$(".span8 .blogResume").hide();
+ 	$("#blogDetail").show();
+ 	return false;
+ });
+
 });
 
 
