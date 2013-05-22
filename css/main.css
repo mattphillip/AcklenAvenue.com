@@ -239,6 +239,61 @@
     width: 370px;
 }
 
+#categories{
+	list-style:none;
+}
+
+#categories li{
+	padding: 10px 0px 10px 10px;
+	border-bottom: 2px solid #999;
+}
+#categories li:last-child{
+	border: 0;
+}
+
+#categories li:before{
+	content:
+}
+
+.blogResume{
+	height:auto;
+	padding: 30px 0;
+	border-bottom: 2px solid #999;
+}
+
+.blogResumeImage{
+	margin-top: 10px;
+	width:150px;
+	height:150px;
+	background-color: #999;
+	margin-left: -25px;
+}
+
+.blogResumeTitle{
+	margin: 0;
+}
+
+.blogResumeMetaData{
+	margin-left: 0;
+}
+
+.blogResumeMetaData li{
+	display: inline;
+	padding: 0 5px;
+	
+}
+
+.blogResumeMetaData li:first-child{
+	padding-left: 0;
+	
+}
+
+.blogResumeDescription{
+	font-size:10pt;
+	line-height: normal;
+	width:450px;
+}
+
 #menu{
 	margin: auto;
 	text-align: center;

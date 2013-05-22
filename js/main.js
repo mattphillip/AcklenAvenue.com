@@ -22,6 +22,7 @@ var startNumberTabs = function() {
   $($('.number')[0]).click();
 };
 
+
 var startCircularAvatars = function() {
   $(".circularGray").hover(function() {
     $(this).stop().animate({
@@ -352,39 +353,44 @@ $(document).ready(function() {
  
   $("#blog-menu").click(function(){
 	  $('html, body').animate({scrollTop: $("#blog").offset().top}, "slow");
-      $('html, body').animate({scrollLeft: $("#blog").offset().left}, "fast");
+      $('html, body').animate({scrollLeft: $("#blog").offset().left}, "slow");
 	  return false;
   });
   
   $("#home-menu").click(function(){
-	   $('html, body').animate({scrollLeft: -$("#home").offset().left}, "fast");
+	   $('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
 	  $('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
      
 	  return false;
   });
   
   $("#services-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "fast");
+	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
 	  $('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
 	  return false;
   });
   
   $("#work-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "fast");
+	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "slow");
 	  $('html, body').animate({scrollTop: $("#work").offset().top}, "slow");
 	  return false;
   });
   
   $("#team-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "fast");
+	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "slow");
 	  $('html, body').animate({scrollTop: $("#team").offset().top}, "slow");
 	  return false;
   });
   
   $("#contact-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "fast");
+	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "slow");
 	  $('html, body').animate({scrollTop: $("#contact").offset().top}, "slow");
 	  return false;
+  });
+  
+  $('#archive>li>a').click(function(){
+        $(this).next('ul').slideToggle();
+		return false;
   });
   
   
