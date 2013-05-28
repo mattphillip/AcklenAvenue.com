@@ -50,6 +50,22 @@ var drawTriangle = function() {
   }
 };
 
+scrollToServiceSection = function(){
+	$('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
+	$('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
+	return false;
+};
+
+scrollToHomeSection = function(){
+	$('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
+	$('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
+	return false;
+};
+
+scrollToSectionWithName = function(sectionName){
+	$('html, body').animate({scrollLeft: -$(sectionName).offset().left}, "slow");
+	$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
+};
 
 startScroll = function(){
 	$("#blog-menu").click(function(){
@@ -66,35 +82,35 @@ startScroll = function(){
 	  	return false;
   	});
   
-  $("#home-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
-	  return false;
-  });
+  // $("#home-menu").click(function(){
+	 //  $('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
+	 //  $('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
+	 //  return false;
+  // });
   
-  $("#services-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
-	  return false;
-  });
+  // $("#services-menu").click(function(){
+	 //  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
+	 //  $('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
+	 //  return false;
+  // });
   
-  $("#work-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#work").offset().top}, "slow");
-	  return false;
-  });
+  // $("#work-menu").click(function(){
+	 //  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "slow");
+	 //  $('html, body').animate({scrollTop: $("#work").offset().top}, "slow");
+	 //  return false;
+  // });
   
-  $("#team-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#team").offset().top}, "slow");
-	  return false;
-  });
+  // $("#team-menu").click(function(){
+	 //  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "slow");
+	 //  $('html, body').animate({scrollTop: $("#team").offset().top}, "slow");
+	 //  return false;
+  // });
   
-  $("#contact-menu").click(function(){
-	  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "slow");
-	  $('html, body').animate({scrollTop: $("#contact").offset().top}, "slow");
-	  return false;
-  });
+  // $("#contact-menu").click(function(){
+	 //  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "slow");
+	 //  $('html, body').animate({scrollTop: $("#contact").offset().top}, "slow");
+	 //  return false;
+  // });
 }
 
 startMethodEffect = function(){
@@ -313,8 +329,55 @@ $(document).ready(function() {
  	$("#blogDetail").show();
  	return false;
  });
-
 });
+
+
+(function($) {
+      
+        var app = $.sammy('#home', function() {
+      
+          this.get('#/', function(context) {
+            context.log('get me to home section');
+            scrollToSectionWithName("#home");
+            // scrollToHomeSection();
+          });
+
+          this.get('#/services', function(context){
+          	context.log('get me to service section');
+          	scrollToSectionWithName("#services");
+          	// scrollToServiceSection();
+          });
+
+          this.get('#/work', function(context){
+          	context.log('get me to work section');
+          	scrollToSectionWithName("#work");
+          	// scrollToWorkSection();
+          });
+
+          this.get('#/team', function(context){
+          	context.log('get me to team section');
+          	scrollToSectionWithName("#team");
+          	// scrollToTeamSection();
+          });
+
+          this.get('#/blog', function(context){
+          	context.log('get me to blog section');
+          	// scrollToBlogSection();
+          });
+
+          this.get('#/contact', function(context){
+          	context.log('get me to contact section');
+          	scrollToSectionWithName("#contact");
+          	// scrollToContactSection();
+          });
+      
+        });
+      
+        $(function() {
+          app.run('#/');
+        });
+      
+      })(jQuery);
 
 
 $(window).resize(function() {
