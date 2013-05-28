@@ -50,68 +50,25 @@ var drawTriangle = function() {
   }
 };
 
-scrollToServiceSection = function(){
-	$('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
-	$('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
-	return false;
-};
-
-scrollToHomeSection = function(){
-	$('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
-	$('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
-	return false;
-};
-
 scrollToSectionWithName = function(sectionName){
-	$('html, body').animate({scrollLeft: -$(sectionName).offset().left}, "slow");
-	$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
-};
-
-startScroll = function(){
-	$("#blog-menu").click(function(){
-	  	if ($('html,body').scrollTop() != $("#blog").offset().top) {
-	  		$('html, body').animate({scrollTop: $("#blog").offset().top}, "slow");
+	if (sectionName == "#blog") {
+		if ($('html,body').scrollTop() != $(sectionName).offset().top) {
+	  		$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
 	  	};
-      	$('html, body').animate({scrollLeft: $("#blog").offset().left}, "slow");
+      	$('html, body').animate({scrollLeft: $(sectionName).offset().left}, "slow");
 
       	if ($("#blogDetail").is(":visible")) {
       		$("#blogDetail").hide();
 			$(".span8 .blogResume").show();
       	};
-		
-	  	return false;
-  	});
-  
-  // $("#home-menu").click(function(){
-	 //  $('html, body').animate({scrollLeft: -$("#home").offset().left}, "slow");
-	 //  $('html, body').animate({scrollTop: $("#home").offset().top}, "slow");
-	 //  return false;
-  // });
-  
-  // $("#services-menu").click(function(){
-	 //  $('html, body').animate({scrollLeft: -$("#services").offset().left}, "slow");
-	 //  $('html, body').animate({scrollTop: $("#services").offset().top}, "slow");
-	 //  return false;
-  // });
-  
-  // $("#work-menu").click(function(){
-	 //  $('html, body').animate({scrollLeft: -$("#work").offset().left}, "slow");
-	 //  $('html, body').animate({scrollTop: $("#work").offset().top}, "slow");
-	 //  return false;
-  // });
-  
-  // $("#team-menu").click(function(){
-	 //  $('html, body').animate({scrollLeft: -$("#team").offset().left}, "slow");
-	 //  $('html, body').animate({scrollTop: $("#team").offset().top}, "slow");
-	 //  return false;
-  // });
-  
-  // $("#contact-menu").click(function(){
-	 //  $('html, body').animate({scrollLeft: -$("#contact").offset().left}, "slow");
-	 //  $('html, body').animate({scrollTop: $("#contact").offset().top}, "slow");
-	 //  return false;
-  // });
-}
+	}else
+	{
+		$('html, body').animate({scrollLeft: -$(sectionName).offset().left}, "slow");
+		$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
+	}
+
+	
+};
 
 startMethodEffect = function(){
 	$("#method-desc").click(function() {
@@ -315,7 +272,7 @@ $(document).ready(function() {
   
   startCircularAvatars();
   drawTriangle();
-  startScroll();
+  // startScroll();
   startServiceContentEffect();
   startMethodContentEffect();
   startArchiveToggle();
@@ -339,36 +296,31 @@ $(document).ready(function() {
           this.get('#/', function(context) {
             context.log('get me to home section');
             scrollToSectionWithName("#home");
-            // scrollToHomeSection();
           });
 
           this.get('#/services', function(context){
           	context.log('get me to service section');
           	scrollToSectionWithName("#services");
-          	// scrollToServiceSection();
           });
 
           this.get('#/work', function(context){
           	context.log('get me to work section');
           	scrollToSectionWithName("#work");
-          	// scrollToWorkSection();
           });
 
           this.get('#/team', function(context){
           	context.log('get me to team section');
           	scrollToSectionWithName("#team");
-          	// scrollToTeamSection();
           });
 
           this.get('#/blog', function(context){
           	context.log('get me to blog section');
-          	// scrollToBlogSection();
+          	scrollToSectionWithName("#blog");
           });
 
           this.get('#/contact', function(context){
           	context.log('get me to contact section');
           	scrollToSectionWithName("#contact");
-          	// scrollToContactSection();
           });
       
         });
