@@ -57,8 +57,8 @@ scrollToSectionWithName = function(sectionName){
 	  	};
       	$('html, body').animate({scrollLeft: $(sectionName).offset().left}, "slow");
 
-      	if ($("#blogDetail").is(":visible")) {
-      		$("#blogDetail").hide();
+      	if ($(".span8 .blogDetail").is(":visible")) {
+      		$(".span8 .blogDetail").hide();
 			$(".span8 .blogResume").show();
       	};
 	}else
@@ -272,7 +272,7 @@ $(document).ready(function() {
   
   startCircularAvatars();
   drawTriangle();
-  // startScroll();
+
   startServiceContentEffect();
   startMethodContentEffect();
   startArchiveToggle();
@@ -281,11 +281,11 @@ $(document).ready(function() {
 
  $("#blogDetail").hide();
 
- $("#blogTitle1").click(function(){
- 	$(".span8 .blogResume").hide();
- 	$("#blogDetail").show();
- 	return false;
- });
+ // $("#blogTitle1").click(function(){
+ // 	$(".span8 .blogResume").hide();
+ // 	$("#blogDetail").show();
+ // 	return false;
+ // });
 });
 
 
@@ -322,6 +322,12 @@ $(document).ready(function() {
           	context.log('get me to contact section');
           	scrollToSectionWithName("#contact");
           });
+
+          this.get("#/blog/constraining-mocks-with-expression-arguments",function(context){
+          	context.log('get me to the blog post constraining-mocks-with-expression-arguments');
+          	$(".span8 .blogResume").hide();
+ 			$("#constraining-mocks-with-expression-arguments").show();
+          })
       
         });
       

@@ -69,21 +69,31 @@
 
 @font-face {
 	font-family: 'GothamBook';
-	src:url('fonts/GothamHTF_Book.ttf') format('truetype');
-	src:url('fonts/GothamHTF_Book.otf');
+    src: url('gothamhtf_book.eot');
+    src: url('gothamhtf_book.eot') format('embedded-opentype'),
+         url('gothamhtf_book.woff') format('woff'),
+         url('gothamhtf_book.ttf') format('truetype'),
+         url('gothamhtf_book.svg#GothamRegular') format('svg');
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
 	font-family: 'HelveticaNeueBold';
 	src:url('fonts/HelveticaNeue_Bold.ttf') format('truetype');
 	src:url('fonts/HelveticaNeue_Bold.otf');
+	font-weight: normal;
+    font-style: normal;
 }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-
+body{
+	font-family:'GothamBook',sans-serif,arial;
+	font-weight: normal;
+}
 
 .avatar{
 	position: relative;
@@ -178,6 +188,7 @@
 	position:absolute;
 	float:right;
 	padding-top:200px;
+	color:#7d7d7d;
 }
 
 
@@ -227,13 +238,34 @@
 	top: 45%;
 }
 
+.blogSideBar{
+	color: #7d7d7d;
+}
+
+.blogSideBar h3{
+	font-size: 13pt;
+}
+
+.blogSideBar ul{
+	margin: 0;
+}
+
+.blogSideBar ul li a{
+	font-size: 10pt;
+	color: #7d7d7d;
+}
+
+.blogSideBar ul li a:focus{
+	outline: none;
+}
+
 #categories{
 	list-style:none;
 }
 
 #categories li{
 	padding: 10px 0px 10px 10px;
-	border-bottom: 2px solid #999;
+	border-bottom: 1px solid #666;
 }
 #categories li:last-child{
 	border: 0;
@@ -243,13 +275,17 @@
 	content:
 }
 
+#archive li ul{
+	margin: 0 0 0 20px;
+}
+
 .blogResume{
 	height:auto;
 	padding: 30px 0;
 	border-bottom: 2px solid #999;
 }
 
-.blogResumeImage{
+.blogResume img{
 	margin-top: 10px;
 	width:150px;
 	height:150px;
@@ -257,19 +293,40 @@
 	margin-left: -25px;
 }
 
-.blogResumeTitle{
+.blogResume h3{
 	margin: 0;
 }
 
-.blogResumeMetaData{
+.blogResume a{
+	color:#7d7d7d;
+}
+
+.blogResume h3 a p{
+	line-height: normal;
+}
+
+.blogResume ul{
 	margin-left: 0;
 }
 
-.blogResumeMetaData li{
+.blogResume ul li{
 	display: inline;
 	padding: 0 5px;
-	
+	font-style: italic;
+	font-size: 10pt;
 }
+
+
+.blogResume ul li:first-child:before{
+	content:"";
+}
+
+.blogResume ul li:before{
+ content:"•";
+ margin-right:0.5em;
+}
+
+
 
 .blogResumeMetaData li:first-child{
 	padding-left: 0;
@@ -299,20 +356,45 @@
     padding: 15px;
 }
 
-.blogDetailImage{
+.blogDetail img{
 	width:600px;
 	height:300px;
 	background-color: #666;
 }
 
-.blogDetailTitle{
+.blogDetail h3{
 	color:#999;
 }
 
-.blogDetailDescription{
+.blogDetail p{
 	font-size:10pt;
 	line-height: normal;
 	width:600px;
+}
+
+.blogDetail ul{
+	margin-left: 0;
+}
+
+.blogDetail ul li{
+	display: inline;
+	padding: 0 5px;
+	font-style: italic;
+	font-size: 10pt;
+}
+
+.blogDetail a{
+	color: #7d7d7d;
+}
+
+
+.blogDetail ul li:first-child:before{
+	content:"";
+}
+
+.blogDetail ul li:before{
+ content:"•";
+ margin-right:0.5em;
 }
 
 
