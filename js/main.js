@@ -290,35 +290,16 @@ $(document).ready(function() {
   startMethodEffect();
   startServiceEffect();
 
-  
 	outerSwiper = $('#outerSwiper').swiper({
-		//Your options here:
 		mode:'horizontal',
 		freeMode: true,
 		freeModeFluid: true,
 		initialSlide : 0,
-		// scrollContainer: true
-		//etc..
 	});
-
-	// innerSwiper = $('#innerSwiper').swiper({
-	// 	//Your options here:
-	// 	mode:'vertical',
-	// 	freeMode: true,
-	// 	freeModeFluid: true,
-	// 	initialSlide : 0,
-	//     // scrollContainer: true
-	// 	//etc..
-	// });
-
 
  $("#blogDetail").hide();
 
- // $("#blogTitle1").click(function(){
- // 	$(".span8 .blogResume").hide();
- // 	$("#blogDetail").show();
- // 	return false;
- // });
+
 });
 
 
@@ -329,7 +310,6 @@ $(document).ready(function() {
           this.get('#/', function(context) {
             context.log('get me to home section');
             scrollToSectionWithName("#home");
-            
           });
 
           this.get('#/services', function(context){
