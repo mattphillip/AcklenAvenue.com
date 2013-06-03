@@ -1,6 +1,5 @@
 var outerSwiper;
-var innerSwiper;
-
+var isOnBlogSection = false;
 
 var startCircularAvatars = function() {
   $(".circularGray").hover(function() {
@@ -55,28 +54,28 @@ var drawTriangle = function() {
 
 scrollToSectionWithName = function(sectionName){
 	if (sectionName == "#blog") {
-		if (outerSwiper.activeIndex != 1) {
+		 if (!isOnBlogSection) {
 			$('html, body').scrollTop($(sectionName).offset().top);
-			outerSwiper.swipeTo(1); 
-		};
+			$('html, body').animate({scrollLeft: $(sectionName).offset().left}, "slow");
+			isOnBlogSection = true;
+		 };
       	if ($(".span8 .blogDetail").is(":visible")) {
       		$(".span8 .blogDetail").hide();
 			$(".span8 .blogResume").show();
       	};
 	}else
 	{
-		if (outerSwiper.activeIndex != 0) {
-			$('html, body').scrollTop($(sectionName).offset().top);	
-			outerSwiper.swipeTo(0); 
-		}
-		else
-		{
-			$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
-		}
+		 if (isOnBlogSection) {
+			$('html, body').scrollTop($(sectionName).offset().top);
+			$('html, body').animate({scrollLeft: -$(sectionName).offset().left}, "slow");
+			isOnBlogSection = false;
+		 }
+		 else
+		 {
+		 	$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
+		 }
 		
 	}
-
-	
 };
 
 startMethodEffect = function(){
@@ -290,14 +289,17 @@ $(document).ready(function() {
   startMethodEffect();
   startServiceEffect();
 
-	outerSwiper = $('#outerSwiper').swiper({
-		mode:'horizontal',
-		freeMode: true,
-		freeModeFluid: true,
-		initialSlide : 0,
-	});
+  $(".swiper-wrapper").css("width",$(window).width()*2);
+  $(".swiper-wrapper").css("height","5500");
 
- $("#blogDetail").hide();
+  $(".swiper-slide").css("width",$(window).width());
+
+	// outerSwiper = $('#outerSwiper').swiper({
+	// 	mode:'horizontal',
+	// 	initialSlide : 0
+	// });
+
+ $("#constraining-mocks-with-expression-arguments").hide();
 
 
 });

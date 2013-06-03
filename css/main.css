@@ -69,11 +69,11 @@
 
 @font-face {
 	font-family: 'GothamBook';
-    src: url('gothamhtf_book.eot');
-    src: url('gothamhtf_book.eot') format('embedded-opentype'),
-         url('gothamhtf_book.woff') format('woff'),
-         url('gothamhtf_book.ttf') format('truetype'),
-         url('gothamhtf_book.svg#GothamRegular') format('svg');
+    src: url('fonts/gothamhtf_book.eot');
+    src: url('fonts/gothamhtf_book.eot') format('embedded-opentype'),
+         url('fonts/gothamhtf_book.woff') format('woff'),
+         url('fonts/gothamhtf_book.ttf') format('truetype'),
+         url('fonts/gothamhtf_book.svg#GothamRegular') format('svg');
     font-style: normal;
     font-weight: normal;
 }
@@ -184,13 +184,13 @@ body{
 }
 
 #blog{
-	left:1600px;
-	position:absolute;
-	float:right;
 	padding-top:200px;
 	color:#7d7d7d;
 }
 
+.swiper-slide{
+	float:left;
+}
 
 
 #home
