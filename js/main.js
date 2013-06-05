@@ -1,5 +1,6 @@
 var outerSwiper;
 var isOnBlogSection = false;
+var windowWidth = $(window).width();
 
 var startCircularAvatars = function() {
   $(".circularGray").hover(function() {
@@ -36,10 +37,10 @@ var drawTriangle = function() {
 
       context.beginPath();
       // Start from the top-left p
-      context.moveTo(parseInt(canvasWidth), 0); // give the (x,y) coordinates
+      context.moveTo(0, 0); // give the (x,y) coordinates
       context.lineTo(parseInt(canvasWidth), parseInt(canvasHeight));
       context.lineTo(0, parseInt(canvasHeight));
-      context.lineTo(parseInt(canvasWidth), 0);
+      context.lineTo(0, 0);
 
       // Done! Now fill the shape, and draw the stroke.
       // Note: your shape will not be visible until you call any of the two methods.
@@ -53,29 +54,7 @@ var drawTriangle = function() {
 };
 
 scrollToSectionWithName = function(sectionName){
-	if (sectionName == "#blog") {
-		 if (!isOnBlogSection) {
-			$('html, body').scrollTop($(sectionName).offset().top);
-			$('html, body').animate({scrollLeft: $(sectionName).offset().left}, "slow");
-			isOnBlogSection = true;
-		 };
-      	if ($(".span8 .blogDetail").is(":visible")) {
-      		$(".span8 .blogDetail").hide();
-			$(".span8 .blogResume").show();
-      	};
-	}else
-	{
-		 if (isOnBlogSection) {
-			$('html, body').scrollTop($(sectionName).offset().top);
-			$('html, body').animate({scrollLeft: -$(sectionName).offset().left}, "slow");
-			isOnBlogSection = false;
-		 }
-		 else
-		 {
-		 	$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
-		 }
-		
-	}
+	$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
 };
 
 startMethodEffect = function(){
@@ -276,7 +255,7 @@ var startArchiveToggle = function(){
 
 $(document).ready(function() {
  
-  $('#home').css("height", $(window).height()-100);
+  $('#home').css("height", $(window).height());
   
   var s = skrollr.init();
   
@@ -289,19 +268,6 @@ $(document).ready(function() {
   startMethodEffect();
   startServiceEffect();
 
-  $(".swiper-wrapper").css("width",$(window).width()*2);
-  $(".swiper-wrapper").css("height","5500");
-
-  $(".swiper-slide").css("width",$(window).width());
-
-	// outerSwiper = $('#outerSwiper').swiper({
-	// 	mode:'horizontal',
-	// 	initialSlide : 0
-	// });
-
- $("#constraining-mocks-with-expression-arguments").hide();
-
-
 });
 
 
@@ -310,40 +276,33 @@ $(document).ready(function() {
         var app = $.sammy('#home', function() {
       
           this.get('#/', function(context) {
-            context.log('get me to home section');
             scrollToSectionWithName("#home");
           });
 
           this.get('#/services', function(context){
-          	context.log('get me to service section');
             scrollToSectionWithName("#services");
           });
 
           this.get('#/work', function(context){
-          	context.log('get me to work section');
           	scrollToSectionWithName("#work");
           });
 
           this.get('#/team', function(context){
-          	context.log('get me to team section');
           	scrollToSectionWithName("#team");
           });
 
-          this.get('#/blog', function(context){
-          	context.log('get me to blog section');
-          	scrollToSectionWithName("#blog");
-          });
+          // this.get('#/blog', function(context){
+          // 	scrollToSectionWithName("#blog");
+          // });
 
           this.get('#/contact', function(context){
-          	context.log('get me to contact section');
           	scrollToSectionWithName("#contact");
           });
 
-          this.get("#/blog/constraining-mocks-with-expression-arguments",function(context){
-          	context.log('get me to the blog post constraining-mocks-with-expression-arguments');
-          	$(".span8 .blogResume").hide();
- 			$("#constraining-mocks-with-expression-arguments").show();
-          })
+    //       this.get("#/blog/constraining-mocks-with-expression-arguments",function(context){
+    //       	$(".span8 .blogResume").hide();
+ 			// $("#constraining-mocks-with-expression-arguments").show();
+    //       })
       
         });
       
