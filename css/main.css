@@ -376,49 +376,48 @@ body{
  margin-right:0.5em;
 }
 
+#header
+{
+	position:fixed;
+	text-align: center;
+	z-index:20;
+	padding-top:5%;
+	right:0;
+	left: 0;
+}
 
 #header h1{
 	background-color: #7A7A7A;
     color: #FFFFFF;
     font-family: 'GothamMedium',sans-serif,arial;
     font-size: 13pt;
-    margin: auto;
-    padding: 5px;
-    text-align: center;
-    top:8%;
-    width: 200px;
-    position:fixed;
-    z-index: 20;
 }
 
 #header nav{
-	margin: 0 auto;
-	text-align: center;
-	position:fixed;
-	width: auto;
 	height:40px;
-	padding-top:5%;
-	z-index:20;
-	right: 350px;
+	margin:10px 0;
 }
 
 #header nav li{
-	display:inline;
-	padding: 10px;
+	display:inline-block;
+	padding: 0 10px 0 10px;
 	border-right: 1px solid #7d7d7d;
-	height:40px;
+	height:100%;
 }
 
 #header nav li:last-child{
+	height:100%;
 	border: 0;
 }
 
 #header a{
-	display:inline-block;
+	height:100%;
+	display:inline;
 	color:#7d7d7d;
-	/*font-family: 'HelveticaNeueRegular',sans-serif,arial;*/
 	font-size:11pt;
 	text-decoration:none;
+	position: relative;
+	top: 10px;
 }
 
 #header a:hover{
