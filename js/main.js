@@ -270,7 +270,8 @@ $(document).ready(function() {
 
   $('#quotes').cycle({ 
     fx:      'scrollRight', 
-    delay:   -4000 
+    delay:   -4000,
+    height: 400 
   });
 
 });
