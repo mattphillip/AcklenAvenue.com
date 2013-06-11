@@ -268,6 +268,11 @@ $(document).ready(function() {
   startMethodEffect();
   startServiceEffect();
 
+  $('#quotes').cycle({ 
+    fx:      'scrollRight', 
+    delay:   -4000 
+  });
+
 });
 
 

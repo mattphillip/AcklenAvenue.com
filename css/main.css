@@ -672,31 +672,26 @@ form{
 	font-weight:bold;
 }
 
-blockquote {
-	background:rgba(249, 249, 249, 0.5);
-	border-left:10px solid #ccc;
-	margin:1.5em 10px;
-	padding:.5em 10px;
-	quotes:"\201C""\201D""\2018""\2019";
+#quotes {
+	position: relative;
 }
-blockquote:before {
-	color:#ccc;
-	content:open-quote;
-	font-size:4em;
-	line-height:.1em;
-	margin-right:.25em;
-	vertical-align:-.4em;
-}
-blockquote:after
+
+#quotes .row
 {
-	color:#ccc;
-	content:close-quote;
-	font-size:4em;
-	line-height:.1em;
-	margin-right:.25em;
-	vertical-align:-.4em;
+	position: relative;
+	padding-top: 200px;
+	margin-left: 0;
 }
-blockquote p {
-	display:inline;
+
+#quotes p {
+	line-height: normal;
+	font-size: 25pt;
+	font-style: italic;
+}
+
+#quotes p.author
+{
+	text-align:right;
+	padding-right: 10px;
 }
 
