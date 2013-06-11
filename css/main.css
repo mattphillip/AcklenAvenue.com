@@ -491,16 +491,16 @@ body{
 
 #services h1{
 	color:#fff;
-	padding-top:240px;
+	padding-top:280px;
 	font-size:25pt;
 	position:relative;
 	font-weight:bold;
 	margin: 0 auto;
-	width:230px;
+	width:240px;
 }
 
 #services .content{
-	padding-top:240px;
+	padding: 280px 0 20px 0;
 	position:relative;
 }
 
@@ -678,20 +678,26 @@ form{
 
 #quotes .row
 {
-	position: relative;
+	position: relative !important;
 	padding-top: 200px;
 	margin-left: 0;
 }
 
 #quotes p {
+	font-family:'GothamMedium',sans-serif,arial;
 	line-height: normal;
-	font-size: 25pt;
+	font-size: 20pt;
 	font-style: italic;
+	margin: 0 auto;
+	width: 700px;
+	position:relative;
 }
 
 #quotes p.author
 {
 	text-align:right;
 	padding-right: 10px;
+	font-style: normal;
+	font-weight: bold;
 }
 
