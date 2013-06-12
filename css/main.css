@@ -640,18 +640,18 @@ form{
 }
 
 #quotes p {
-	font-family:'GothamMedium',sans-serif,arial;
 	line-height: normal;
 	font-size: 20pt;
 	font-style: italic;
 	margin: 0 auto;
-	width: 700px;
+	width: 600px;
 	position:relative;
 }
 
 #quotes p.author
 {
 	text-align:right;
+	padding-top: 10px;
 	padding-right: 10px;
 	font-style: normal;
 	font-weight: bold;
