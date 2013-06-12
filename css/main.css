@@ -1,89 +1,57 @@
 @font-face {
-	font-family: 'knockout';
-	src: url('fonts/Knockout-HTF28-JuniorFeatherwt.otf'); /* IE9 Compat Modes */
-	src: url('fonts/Knockout-HTF28-JuniorFeatherwt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	     url('fonts/Knockout-HTF28-JuniorFeatherwt.woff') format('woff'), /* Modern Browsers */
-	     url('fonts/Knockout-HTF28-JuniorFeatherwt.ttf')  format('truetype'), /* Safari, Android, iOS */
-	     url('fonts/Knockout-HTF28-JuniorFeatherwt.svg#knockout') format('svg'); /* Legacy iOS */
-	}
-	
-@font-face {
-    font-family: 'GothamMedium';
-    src: url('fonts/gothamhtf_medium-webfont.eot');
-    src: url('fonts/gothamhtf_medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gothamhtf_medium-webfont.woff') format('woff'),
-         url('fonts/gothamhtf_medium-webfont.ttf') format('truetype'),
-         url('fonts/gothamhtf_medium-webfont.svg#gotham_mediumregular') format('svg');
-    font-weight: normal;
+    font-family: 'gotham_htf_bold';
+    src: url('fonts/gothamhtf-bold-webfont.eot');
+    src: url('fonts/gothamhtf-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gothamhtf-bold-webfont.woff') format('woff'),
+         url('fonts/gothamhtf-bold-webfont.ttf') format('truetype'),
+         url('fonts/gothamhtf-bold-webfont.svg#gotham_htfbold') format('svg');
+    font-weight: bold;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'GothamBold';
-    src: url('fonts/gothamhtf_bold-webfont.eot');
-    src: url('fonts/gothamhtf_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/sgothamhtf_bold-webfont.woff') format('woff'),
-         url('fonts/gothamhtf_bold-webfont.ttf') format('truetype'),
-         url('fonts/gothamhtf_bold-webfont.svg#gotham_boldregular') format('svg');
+    font-family: 'gotham_htf_medium';
+    src: url('fonts/gothamhtf-medium-webfont.eot');
+    src: url('fonts/gothamhtf-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gothamhtf-medium-webfont.woff') format('woff'),
+         url('fonts/gothamhtf-medium-webfont.ttf') format('truetype'),
+         url('fonts/gothamhtf-medium-webfont.svg#gotham_htfmedium') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'HelveticaNeueRegular';
-    src: url('fonts/helveticaneue_regular-webfont.eot');
-    src: url('fonts/helveticaneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue_regular-webfont.woff') format('woff'),
-         url('fonts/helveticaneue_regular-webfont.ttf') format('truetype'),
-         url('fonts/helveticaneue_regular-webfont.svg#helvetica_neueregular') format('svg');
+    font-family: 'gotham_htf_light';
+    src: url('fonts/gothamhtf-light-webfont.eot');
+    src: url('fonts/gothamhtf-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gothamhtf-light-webfont.woff') format('woff'),
+         url('fonts/gothamhtf-light-webfont.ttf') format('truetype'),
+         url('fonts/gothamhtf-light-webfont.svg#gotham_htflight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'HelveticaBold';
-    src: url('fonts/helveticabold-webfont.eot');
-    src: url('fonts/helveticabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticabold-webfont.woff') format('woff'),
-         url('fonts/helveticabold-webfont.ttf') format('truetype'),
-         url('fonts/helveticabold-webfont.svg#helveticabold') format('svg');
+    font-family: 'gotham_htf_book';
+    src: url('fonts/gothamhtf-book-webfont.eot');
+    src: url('fonts/gothamhtf-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gothamhtf-book-webfont.woff') format('woff'),
+         url('fonts/gothamhtf-book-webfont.ttf') format('truetype'),
+         url('fonts/gothamhtf-book-webfont.svg#gotham_htfbook') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'HelveticaRegular';
-    src: url('fonts/helveticanormal-webfont.eot');
-    src: url('fonts/helveticanormal-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticanormal-webfont.woff') format('woff'),
-         url('fonts/helveticanormal-webfont.ttf') format('truetype'),
-         url('fonts/helveticanormal-webfont.svg#helveticaregular') format('svg');
+    font-family: 'gotham_htf_bookitalic';
+    src: url('fonts/gothamhtf-bookitalic-webfont.eot');
+    src: url('fonts/gothamhtf-bookitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gothamhtf-bookitalic-webfont.woff') format('woff'),
+         url('fonts/gothamhtf-bookitalic-webfont.ttf') format('truetype'),
+         url('fonts/gothamhtf-bookitalic-webfont.svg#gotham_htfbook_italic') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
-}
-
-@font-face {
-	font-family: 'GothamBook';
-    src: url('fonts/gothamhtf_book.eot');
-    src: url('fonts/gothamhtf_book.eot') format('embedded-opentype'),
-         url('fonts/gothamhtf_book.woff') format('woff'),
-         url('fonts/gothamhtf_book.ttf') format('truetype'),
-         url('fonts/gothamhtf_book.svg#GothamRegular') format('svg');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-	font-family: 'HelveticaNeueBold';
-	src:url('fonts/HelveticaNeue_Bold.ttf') format('truetype');
-	src:url('fonts/HelveticaNeue_Bold.otf');
-	font-weight: normal;
-    font-style: normal;
 }
 
 /* ==========================================================================
@@ -91,7 +59,7 @@
    ========================================================================== */
 
 body{
-	font-family:'GothamBook',sans-serif,arial;
+	font-family:'gotham_htf_book',sans-serif,arial;
 	font-weight: normal;
 }
 
@@ -212,7 +180,7 @@ body{
 	width: 490px;
 	font-weight:normal;
 	position:relative;
-	font-family:'GothamMedium',sans-serif,arial;
+	font-family:'gotham_htf_medium',sans-serif,arial;
 	line-height: 105%;
 	padding-top: 30%;
 }
@@ -389,7 +357,7 @@ body{
 #header h1{
 	background-color: #7A7A7A;
     color: #FFFFFF;
-    font-family: 'GothamMedium',sans-serif,arial;
+    font-family: 'gotham_htf_medium',sans-serif,arial;
     font-size: 13pt;
 }
 
@@ -478,7 +446,7 @@ body{
 #team{
 	background-color: #282828;
 	color: white;
-	font-family: 'knockout';
+	font-family: 'gotham_htf_medium',sans-serif,arial;
 	margin-top: -2px;
 }
 
@@ -500,7 +468,7 @@ body{
 }
 
 #tagline h1 strong{
-	font-family:'GothamBold',sans-serif,arial;
+	ffont-family: 'gotham_htf_bold',sans-serif,arial;
 }
 
 #services{
@@ -607,7 +575,7 @@ input[type="submit"]
 }
 
 form{
-	font-family: 'GothamMedium',sans-serif,arial;
+	font-family: 'gotham_htf_medium',sans-serif,arial;
 }
 
 .contactParagraph{
@@ -616,14 +584,14 @@ form{
 }
 
 .contactTitle{
-	font-family: 'GothamMedium',sans-serif,arial;
+	font-family: 'gotham_htf_medium',sans-serif,arial;
 	font-weight:bold;
 	font-size:22pt;
 	text-align: center;
 }
 
 .contactSubtitle{
-	font-family: 'GothamMedium',sans-serif,arial;
+	font-family: 'gotham_htf_medium',sans-serif,arial;
 	font-size:15pt;
 	font-weight:bold;
 }
@@ -642,10 +610,11 @@ form{
 #quotes p {
 	line-height: normal;
 	font-size: 20pt;
-	font-style: italic;
+	font-family: 'gotham_htf_bookitalic',sans-serif,arial;
 	margin: 0 auto;
 	width: 600px;
 	position:relative;
+	font-style: italic;
 }
 
 #quotes p.author
@@ -654,6 +623,6 @@ form{
 	padding-top: 10px;
 	padding-right: 10px;
 	font-style: normal;
-	font-weight: bold;
+	font-family: 'gotham_htf_bold',sans-serif,arial;
 }
 
