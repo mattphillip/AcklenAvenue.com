@@ -61,6 +61,7 @@
 body{
 	font-family:'gotham_htf_book',sans-serif,arial;
 	font-weight: normal;
+	color: #373737;
 }
 
 .avatar{
@@ -167,13 +168,13 @@ body{
 
 #home
 {
-	background-image:url(../img/background-traffic.jpg);
+	background-image:url(../img/home-background-2wide.jpg);
 	min-height:650px;;
 }
 
 #home h1
 {
-	color:#7A7A7A;
+	color:white;
 	margin: 0 auto;
 	font-size:20pt;
 	text-align:left;
@@ -346,6 +347,7 @@ body{
 
 #header
 {
+	color:white;
 	position:fixed;
 	text-align: center;
 	z-index:20;
@@ -354,11 +356,10 @@ body{
 	left: 0;
 }
 
-#header h1{
-	background-color: #7A7A7A;
-    color: #FFFFFF;
-    font-family: 'gotham_htf_medium',sans-serif,arial;
-    font-size: 13pt;
+#header .logo{
+	background-image:url(../img/acklen-logo-transparent-white.png);
+	height: 40px;
+	width: 220px;
 }
 
 #header nav{
@@ -369,7 +370,7 @@ body{
 #header nav li{
 	display:inline-block;
 	padding: 0 10px 0 10px;
-	border-right: 1px solid #7d7d7d;
+	border-right: 1px solid white;
 	height:100%;
 }
 
@@ -381,7 +382,7 @@ body{
 #header a{
 	height:100%;
 	display:inline;
-	color:#7d7d7d;
+	color:white;
 	font-size:11pt;
 	text-decoration:none;
 	position: relative;

@@ -1,9 +1,10 @@
 var outerSwiper;
 var isOnBlogSection = false;
 var windowWidth = $(window).width();
+var app;
 
-var startCircularAvatars = function() {
-  $(".circularGray").hover(function() {
+function startCircularAvatars(){
+	$(".circularGray").hover(function() {
     $(this).stop().animate({
       'opacity': 0
     }, 500);
@@ -15,7 +16,8 @@ var startCircularAvatars = function() {
   });
 };
 
-var drawTriangle = function() {
+function drawTriangle()
+{
   var elem = document.getElementById('triangle');
   canvasWidth = $(window).width();
   canvasHeight = $(window).height();
@@ -53,11 +55,12 @@ var drawTriangle = function() {
   }
 };
 
-scrollToSectionWithName = function(sectionName){
+var scrollToSectionWithName = function(sectionName){
+	console.log("section: " + $(sectionName).offset().top);
 	$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
 };
 
-startMethodEffect = function(){
+function startMethodEffect(){
 	$("#method-desc").click(function() {
 		if($("#service-desc").is(":visible")){
 			$("#service-desc").hide("slow");
@@ -78,7 +81,7 @@ startMethodEffect = function(){
 	});
 }
 
-startServiceEffect = function(){
+function startServiceEffect(){
 	$("#service-desc").click(function() {
 		if($("#method-desc").is(":visible")){
 			$("#method-desc").hide("slow");
@@ -100,7 +103,7 @@ startServiceEffect = function(){
 	});
 }
 
-startServiceContentEffect = function(){
+function startServiceContentEffect(){
 	$("#agile-consulting-title").click(function(){
 
 	  if ($("#custom-software-desc").is(":visible")) {
@@ -161,7 +164,7 @@ startServiceContentEffect = function(){
   $("#nearshore-desc").hide();
 }
 
-startMethodContentEffect = function(){
+function startMethodContentEffect(){
 	$("#project-about-title").click(function(){
 	  $("#which-piece-desc").hide("slow");
 	  $("#which-piece-title").addClass("notActive");
@@ -263,7 +266,7 @@ startMethodContentEffect = function(){
   $("#project-about-desc").hide();
 }
 
-var startArchiveToggle = function(){
+function startArchiveToggle(){
 	$('#archive>li>a').click(function(){
         $(this).next('ul').slideToggle();
 		return false;
@@ -273,71 +276,98 @@ var startArchiveToggle = function(){
 
 
 $(document).ready(function() {
- 
-  $('#home').css("height", $(window).height());
+
+$('#home').css("height", $(window).height());
+
+			var s = skrollr.init();
+			startCircularAvatars();
+			drawTriangle();
+			startServiceContentEffect();
+			$('#quotes').cycle({ 
+			    fx:      'scrollRight', 
+			    delay:   -6000,
+			    height: 400,
+			});
+			$("#quotes .row").css("position","relative");
+
   
-  var s = skrollr.init();
-  
-  startCircularAvatars();
-  drawTriangle();
-
-  startServiceContentEffect();
-  // startMethodContentEffect();
-  startArchiveToggle();
-  // startMethodEffect();
-  // startServiceEffect();
-
-  $('#quotes').cycle({ 
-    fx:      'scrollRight', 
-    delay:   -4000,
-    height: 400,
-  });
-
-  $("#quotes .row").css("position","relative");
-
-});
-
-
-(function($) {
-      
-        var app = $.sammy('#home', function() {
+  		app = $.sammy('#content', function() {
       
           this.get('#/', function(context) {
-            scrollToSectionWithName("#home");
+            if ($('#blog').length!=0){
+          		loadAllSectionsAndScrollToSection("#home")
+          	}
+          	else
+          	{
+          		scrollToSectionWithName("#home");
+          	}
           });
 
           this.get('#/services', function(context){
-            scrollToSectionWithName("#services");
+          	if ($('#blog').length!=0){
+          		loadAllSectionsAndScrollToSection("#services")
+          	}
+          	else
+          	{
+          		scrollToSectionWithName("#services");
+          	}
           });
 
           this.get('#/work', function(context){
-          	scrollToSectionWithName("#work");
+          	if ($('#blog').length!=0){
+          		loadAllSectionsAndScrollToSection("#work")
+          	}
+          	else
+          	{
+          		scrollToSectionWithName("#work");
+          	}
           });
 
           this.get('#/team', function(context){
-          	scrollToSectionWithName("#team");
+          	if ($('#blog').length!=0){
+          		loadAllSectionsAndScrollToSection("#team")
+          	}
+          	else
+          	{
+          		scrollToSectionWithName("#team");
+          	}
           });
 
-          // this.get('#/blog', function(context){
-          // 	scrollToSectionWithName("#blog");
-          // });
+          this.get('#/blog', function(context){
+           	 $('#content').empty();
+           	 $('#content').load('blog.html');
+           	 $('#content').scrollTop(0);
+          });
 
           this.get('#/contact', function(context){
           	scrollToSectionWithName("#contact");
-          });
+          });   
+        });
 
-    //       this.get("#/blog/constraining-mocks-with-expression-arguments",function(context){
-    //       	$(".span8 .blogResume").hide();
- 			// $("#constraining-mocks-with-expression-arguments").show();
-    //       })
-      
+		app.run('#/');
+  	
+  
+  
+
+	
+});
+
+function loadAllSectionsAndScrollToSection(sectionName){
+        $('#content').empty();
+        $('#content').load('allsections.html', function(){
+        	var s = skrollr.init();
+			startCircularAvatars();
+			drawTriangle();
+			startServiceContentEffect();
+			$('#quotes').cycle({ 
+			    fx:      'scrollRight', 
+			    delay:   -6000,
+			    height: 400,
+			});
+			$("#quotes .row").css("position","relative");
+			scrollToSectionWithName(sectionName);
         });
-      
-        $(function() {
-          app.run('#/');
-        });
-      
-      })(jQuery);
+};
 
 
 $(window).resize(function() {
