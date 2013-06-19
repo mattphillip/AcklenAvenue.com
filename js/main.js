@@ -294,49 +294,20 @@ $('#home').css("height", $(window).height());
   		app = $.sammy('#content', function() {
       
           this.get('#/', function(context) {
-            if ($('#blog').length!=0){
-          		loadAllSectionsAndScrollToSection("#home")
-          	}
-          	else
-          	{
           		scrollToSectionWithName("#home");
-          	}
           });
 
           this.get('#/services', function(context){
-          	if ($('#blog').length!=0){
-          		loadAllSectionsAndScrollToSection("#services")
-          	}
-          	else
-          	{
           		scrollToSectionWithName("#services");
-          	}
           });
 
           this.get('#/work', function(context){
-          	if ($('#blog').length!=0){
-          		loadAllSectionsAndScrollToSection("#work")
-          	}
-          	else
-          	{
           		scrollToSectionWithName("#work");
-          	}
-          });
+
+      });
 
           this.get('#/team', function(context){
-          	if ($('#blog').length!=0){
-          		loadAllSectionsAndScrollToSection("#team")
-          	}
-          	else
-          	{
           		scrollToSectionWithName("#team");
-          	}
-          });
-
-          this.get('#/blog', function(context){
-           	 $('#content').empty();
-           	 $('#content').load('blog.html');
-           	 $('#content').scrollTop(0);
           });
 
           this.get('#/contact', function(context){
@@ -345,11 +316,37 @@ $('#home').css("height", $(window).height());
         });
 
 		app.run('#/');
-  	
-  
-  
 
-	
+
+	$('#right').cycle({ 
+    	fx:      'scrollRight', 
+    	next:   '#right', 
+    	timeout:  0, 
+    	easing:  'easeInOutBack' 
+    });
+
+	$("#piims").click(function(){
+		$("#thrv3_content").slideUp("slow");
+		$("#gifthub_content").slideUp("slow");
+		$("#piims_content").slideDown("slow");
+		return false;
+	});
+
+	$("#thrv3").click(function(){
+		$("#gifthub_content").slideUp("slow");
+		$("#piims_content").slideUp("slow");
+		$("#thrv3_content").slideDown("slow");
+		return false;
+	});
+
+	$("#gifthub").click(function(){
+		$("#piims_content").slideUp("slow");
+		$("#thrv3_content").slideUp("slow");
+		$("#gifthub_content").slideDown("slow");
+		return false;
+	});
+
+
 });
 
 function loadAllSectionsAndScrollToSection(sectionName){

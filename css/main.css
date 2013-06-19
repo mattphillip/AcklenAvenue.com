@@ -409,6 +409,50 @@ body{
 	/*font-family:'GothamMedium',sans-serif,arial;*/
 }
 
+#work ul{
+	width: 100%;
+	margin:0;
+}
+
+#work ul li{
+	list-style: none;
+	padding-bottom: 25px;
+	text-align: right;
+}
+
+#work a{
+	text-decoration: none;
+	color: gray;
+	content: "";
+	font-size: 25pt;
+	font-family:'gotham_htf_book',sans-serif,arial;
+	font-weight: normal;
+	
+}
+
+#work a:active{
+	color: #373737;
+}
+
+#work a:active:after{
+	content: "- ";
+	margin-right: -25px;
+}
+
+#work a:focus{
+	color: #373737;
+	outline: none;
+}
+
+#work a:focus:after{
+	content: "- ";
+	margin-right: -25px;
+}
+
+#work a:hover{
+	color: #373737;
+}
+
 #work h1
 {
 	padding: 150px 0 50px 0;
@@ -419,28 +463,32 @@ body{
 	width:240px;
 }
 
-#work .row
-{
-}
-
 #work h4
 {
-	border-bottom:2px solid #069;
 	padding-bottom:5px;
-	color:#666;
-	font-size: 20pt;
+	font-size: 25pt;
+	font-family:'gotham_htf_book',sans-serif,arial;
+	font-weight: normal;
+	text-align: right;
 }
 
 #work p{
-	font-size:14pt;
+	font-size:10pt;
 	color:#666;
-	padding-bottom:50px;
 	line-height:normal;
 }
 
-#work .image
+#work .smallImage
 {
-	height:250px;
+	height:130px;
+	width: 190px;
+	background-color:#CCC;
+	margin-bottom: 10px;
+}
+
+#work .bigImage{
+	height:270px;
+	width: 460px;
 	background-color:#CCC;
 }
 
