@@ -410,7 +410,7 @@ body{
 	text-decoration: none;
 	color: gray;
 	content: "";
-	font-size: 25pt;
+	font-size: 18pt;
 	font-family:'gotham_htf_book',sans-serif,arial;
 	font-weight: normal;
 	
@@ -442,7 +442,7 @@ body{
 #work h1
 {
 	padding: 150px 0 50px 0;
-	font-size:25pt;
+	font-size:20pt;
 	position:relative;
 	font-weight:bold;
 	margin: 0 auto;
@@ -490,7 +490,7 @@ body{
 
 #team h1{
 	padding: 150px 0 50px 0;
-	font-size:25pt;
+	font-size:20pt;
 	position:relative;
 	font-weight:bold;
 	margin: 0 auto;
@@ -508,10 +508,6 @@ body{
 
 #tagline{
 	background-image:url(../img/background-window.jpg);
-}
-
-#tagline h1{
-	
 }
 
 #tagline h1 strong{
@@ -535,7 +531,7 @@ body{
 #services h1{
 	color:#fff;
 	padding-top:280px;
-	font-size:25pt;
+	font-size:20pt;
 	position:relative;
 	font-weight:bold;
 	margin: 0 auto;
@@ -656,13 +652,13 @@ form{
 
 #quotes p {
 	line-height: normal;
-	font-size: 20pt;
+	font-size: 17pt;
 	font-family: 'gotham_htf_bookitalic',sans-serif,arial;
-	margin: 0 auto;
-	width: 600px;
-	position:relative;
 	font-style: italic;
-	letter-spacing: 2px;
+	margin: 0 auto;
+	width: 700px;
+	position:relative;
+	letter-spacing: 4pt;
 }
 
 #quotes p.author
