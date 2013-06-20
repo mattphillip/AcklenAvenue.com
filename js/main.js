@@ -56,8 +56,14 @@ function drawTriangle()
 };
 
 var scrollToSectionWithName = function(sectionName){
-	console.log("section: " + $(sectionName).offset().top);
-	$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
+	if (sectionName == "#team") {
+		$('html, body').animate({scrollTop: $(sectionName).offset().top-200}, "slow");
+	}
+	else
+	{
+		$('html, body').animate({scrollTop: $(sectionName).offset().top}, "slow");
+	}
+	
 };
 
 function startMethodEffect(){
@@ -293,6 +299,8 @@ $('#home').css("height", $(window).height());
   
   		app = $.sammy('#content', function() {
       
+          console.log("sammy");
+
           this.get('#/', function(context) {
           		scrollToSectionWithName("#home");
           });
@@ -303,10 +311,11 @@ $('#home').css("height", $(window).height());
 
           this.get('#/work', function(context){
           		scrollToSectionWithName("#work");
-
-      });
+      	  });
 
           this.get('#/team', function(context){
+          	    console.log("go to team");
+
           		scrollToSectionWithName("#team");
           });
 
@@ -317,13 +326,6 @@ $('#home').css("height", $(window).height());
 
 		app.run('#/');
 
-
-	$('#right').cycle({ 
-    	fx:      'scrollRight', 
-    	next:   '#right', 
-    	timeout:  0, 
-    	easing:  'easeInOutBack' 
-    });
 
 	$("#piims").click(function(){
 		$("#thrv3_content").slideUp("slow");

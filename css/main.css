@@ -130,27 +130,14 @@ body{
 }
 
 .small{
-	width: 150px;
-	height: 150px;
+	width: 130px;
+	height: 130px;
 	border-radius: 85px;
 	-webkit-border-radius: 85px;
 	-moz-border-radius: 85px;
 }
 
-.staff{
-	font-size: 30px;
-	text-align: center;
-	padding: 10px 0px 10px 0px;
-}
 
-.staffTitle{
-	font-size: 200px;
-	font-weight: normal;
-	height: 200px;
-	line-height: 100%;
-	margin-bottom: 200px
-	margin-top:60px;
-}
 
 #blog{
 	padding-top:200px;
@@ -495,13 +482,25 @@ body{
 #team{
 	background-color: #282828;
 	color: white;
-	font-family: 'gotham_htf_medium',sans-serif,arial;
-	margin-top: -2px;
 }
 
 #team .container{
 	position: relative;
-	top: -300px;
+	top: -200px;
+}
+
+#team h1{
+	padding: 150px 0 50px 0;
+	font-size:25pt;
+	position:relative;
+	font-weight:bold;
+	margin: 0 auto;
+	color:white;
+}
+
+#team .row{
+	text-align: center;
+	padding-bottom: 20px;
 }
 
 #triangle{
@@ -517,7 +516,7 @@ body{
 }
 
 #tagline h1 strong{
-	ffont-family: 'gotham_htf_bold',sans-serif,arial;
+	font-family: 'gotham_htf_bold',sans-serif,arial;
 }
 
 #services{
@@ -664,6 +663,7 @@ form{
 	width: 600px;
 	position:relative;
 	font-style: italic;
+	letter-spacing: 2px;
 }
 
 #quotes p.author
