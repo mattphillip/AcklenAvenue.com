@@ -376,15 +376,15 @@ body{
 }
 
 #header a:hover{
-	color:#373737;
+	color:#b7b7b7;
 }
 
 #header a:active{
-	color:#373737;
+	color:#b7b7b7;
 }
 
 #header a:focus{
-	color:#373737;
+	color:#b7b7b7;
 	outline: none;
 }
 
