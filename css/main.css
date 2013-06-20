@@ -343,7 +343,6 @@ body{
 }
 
 #header .logo{
-	background-image:url(../img/acklen-logo-transparent-white.png);
 	height: 40px;
 	width: 220px;
 }
@@ -461,7 +460,8 @@ body{
 #work p{
 	font-size:10pt;
 	color:#666;
-	line-height:normal;
+	line-height:18px;
+	padding-top: 20px;
 }
 
 #work .smallImage
@@ -573,6 +573,7 @@ body{
 	float:left;
 	padding-right: 4px;
 	font-size: 30pt;
+	font-family: Helvetica, sans-serif,arial;
 }
 
 #services p{
