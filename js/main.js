@@ -56,6 +56,7 @@ function drawTriangle()
 };
 
 var scrollToSectionWithName = function(sectionName){
+	console.log($(sectionName).offset().top);
 	if (sectionName == "#team") {
 		$('html, body').animate({scrollTop: $(sectionName).offset().top-200}, "slow");
 	}
