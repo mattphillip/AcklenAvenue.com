@@ -61,7 +61,7 @@
 body{
 	font-family: Helvetica, sans-serif,arial;
 	font-weight: normal;
-	letter-spacing: .8px;
+	letter-spacing: 1px;
 	color: #373737;
 }
 
@@ -572,7 +572,7 @@ body{
     width: auto;
 	font-weight:bold;
 	padding-left: 15px;
-	letter-spacing: 1px;
+	
 }
 
 #services h2 div{
