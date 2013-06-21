@@ -351,7 +351,6 @@ $('#home').css("height", $(window).height());
 
 	
 
-
 });
 
 function loadAllSectionsAndScrollToSection(sectionName){
