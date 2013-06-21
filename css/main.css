@@ -168,7 +168,7 @@ body{
 	width: 500px;
 	font-weight:normal;
 	position:relative;
-	font-family:'gotham_htf_medium',sans-serif,arial;
+	font-family:'gotham_htf_book',sans-serif,arial;
 	line-height: 105%;
 	padding-top: 30%;
 }
@@ -498,6 +498,7 @@ body{
 	font-weight:bold;
 	margin: 0 auto;
 	color:white;
+	font-family:'gotham_htf_medium',sans-serif,arial;
 }
 
 #team .row{
