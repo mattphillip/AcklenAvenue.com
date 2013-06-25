@@ -480,6 +480,12 @@ body{
 	background-color:#CCC;
 }
 
+#work .fullImage{
+	height:240px;
+	width:100%;
+	background-color: #ccc;
+}
+
 #team{
 	background-color: #282828;
 	color: white;
