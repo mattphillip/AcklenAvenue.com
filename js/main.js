@@ -349,34 +349,34 @@ $('#home').css("height", $(window).height());
 		return false;
 	});
 
-	$("img.img-circle").hover(
-		function () {
-			var teamMemberName = $(this).attr("alt");
-			$(this).next().text(teamMemberName);
-		},
-		function () {
-			var teamMemberName = $(this).attr("alt");
-			if (teamMemberName=="Colin") {
-				$(this).next().text("CEO, co-founder");
-			}
-			else if (teamMemberName=="Byron") {
-				$(this).next().text("CTO, co-founder");
-			}
-			else if (teamMemberName=="David") {
-				$(this).next().text("CFO, co-founder");
-			}
-			else if (teamMemberName=="Andy") {
-				$(this).next().text("Designer/UX");
-			}
-			else if (teamMemberName=="Dan") {
-				$(this).next().text("Business Development");
-			}
-			else{
-				$(this).next().text("Developer");
-			}
+	// $("img.img-circle").hover(
+	// 	function () {
+	// 		var teamMemberName = $(this).attr("alt");
+	// 		$(this).next().text(teamMemberName);
+	// 	},
+	// 	function () {
+	// 		var teamMemberName = $(this).attr("alt");
+	// 		if (teamMemberName=="Colin") {
+	// 			$(this).next().text("CEO, co-founder");
+	// 		}
+	// 		else if (teamMemberName=="Byron") {
+	// 			$(this).next().text("CTO, co-founder");
+	// 		}
+	// 		else if (teamMemberName=="David") {
+	// 			$(this).next().text("CFO, co-founder");
+	// 		}
+	// 		else if (teamMemberName=="Andy") {
+	// 			$(this).next().text("Designer/UX");
+	// 		}
+	// 		else if (teamMemberName=="Dan") {
+	// 			$(this).next().text("Business Development");
+	// 		}
+	// 		else{
+	// 			$(this).next().text("Developer");
+	// 		}
 
-		}
-	);
+	// 	}
+	// );
 
 });
 
