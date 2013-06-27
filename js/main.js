@@ -123,7 +123,7 @@ function startServiceContentEffect(){
 	    $("#nearshore-title").addClass("notActive");
 	  };
 
-	  $("#agile-consulting").animate({paddingTop: "280px"},"slow");
+	  $("#custom-software").animate({paddingTop: "220px"},"slow");
 	  $("#agile-consulting-desc").show("slow");
 	  $("#agile-consulting-title").removeClass("notActive");
 	  return false;
@@ -140,7 +140,7 @@ function startServiceContentEffect(){
 	    $("#nearshore-title").addClass("notActive");
 	};
 	  
-	  $("#agile-consulting").animate({paddingTop: "220px"},"slow");
+	  $("#custom-software").animate({paddingTop: "280px"},"slow");
 	  $("#custom-software-desc").show("slow");
 	  $("#custom-software-title").removeClass("notActive");
 	  return false;
@@ -157,17 +157,17 @@ function startServiceContentEffect(){
 	    $("#custom-software-title").addClass("notActive");
 	};
 	  
-	  $("#agile-consulting").animate({paddingTop: "160px"},"slow");
+	  $("#custom-software").animate({paddingTop: "160px"},"slow");
 	  $("#nearshore-desc").show("slow");
 	  $("#nearshore-title").removeClass("notActive");
 	  return false;
   });
   
-  $("#agile-consulting").css("padding-top","280");
-  $("#custom-software").css("padding-top","0");
+  $("#agile-consulting").css("padding-top","0");
+  $("#custom-software").css("padding-top","280");
   $("#nearshore").css("padding-top","0");
-  $("#agile-consulting-desc").show();
-  $("#custom-software-desc").hide();
+  $("#agile-consulting-desc").hide();
+  $("#custom-software-desc").show();
   $("#nearshore-desc").hide();
 }
 
@@ -328,23 +328,53 @@ $('#home').css("height", $(window).height());
 		app.run('#/');
 
 
+
+	$("#vanderbilt").click(function(){
+		$("#thrv3_content").slideUp("slow");
+		$("#invivolink_content").slideUp("slow");
+		$("#leankit_content").slideUp("slow");
+		$("#gifthub_content").slideUp("slow");
+		$("#piims_content").slideUp("slow");
+		$("#vanderbilt_content").slideDown("slow");
+		return false;
+	});
+
 	$("#piims").click(function(){
 		$("#thrv3_content").slideUp("slow");
+		$("#vanderbilt_content").slideUp("slow");
+		$("#invivolink_content").slideUp("slow");
+		$("#leankit_content").slideUp("slow");
 		$("#gifthub_content").slideUp("slow");
 		$("#piims_content").slideDown("slow");
 		return false;
 	});
 
-	$("#thrv3").click(function(){
+	$("#invivolink").click(function(){
+		$("#thrv3_content").slideUp("slow");
+		$("#vanderbilt_content").slideUp("slow");
+		$("#leankit_content").slideUp("slow");
 		$("#gifthub_content").slideUp("slow");
 		$("#piims_content").slideUp("slow");
-		$("#thrv3_content").slideDown("slow");
+		$("#invivolink_content").slideDown("slow");
+		return false;
+	});
+
+	$("#leankit").click(function(){
+		$("#thrv3_content").slideUp("slow");
+		$("#vanderbilt_content").slideUp("slow");
+		$("#gifthub_content").slideUp("slow");
+		$("#piims_content").slideUp("slow");
+		$("#invivolink_content").slideUp("slow");
+		$("#leankit_content").slideDown("slow");
 		return false;
 	});
 
 	$("#gifthub").click(function(){
-		$("#piims_content").slideUp("slow");
 		$("#thrv3_content").slideUp("slow");
+		$("#vanderbilt_content").slideUp("slow");
+		$("#piims_content").slideUp("slow");
+		$("#invivolink_content").slideUp("slow");
+		$("#leankit_content").slideUp("slow");
 		$("#gifthub_content").slideDown("slow");
 		return false;
 	});
