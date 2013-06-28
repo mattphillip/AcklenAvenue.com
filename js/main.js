@@ -280,25 +280,8 @@ function startArchiveToggle(){
   });
 }
 
-
-
-$(document).ready(function() {
-
-$('#home').css("height", $(window).height());
-
-			var s = skrollr.init();
-			startCircularAvatars();
-			drawTriangle();
-			startServiceContentEffect();
-			$('#quotes').cycle({ 
-			    fx:      'scrollRight', 
-			    delay:   -6000,
-			    height: 400,
-			});
-			$("#quotes .row").css("position","relative");
-
-  
-  		app = $.sammy('#content', function() {
+function startSammy(){
+	app = $.sammy('#content', function() {
       
           console.log("sammy");
 
@@ -326,9 +309,27 @@ $('#home').css("height", $(window).height());
         });
 
 		app.run('#/');
+}
 
+$(document).ready(function() {
 
+$('#home').css("height", $(window).height());
 
+			var s = skrollr.init();
+			startCircularAvatars();
+			drawTriangle();
+			startServiceContentEffect();
+			$('#quotes').cycle({ 
+			    fx:      'scrollRight', 
+			    delay:   -6000,
+			    height: 500,
+			});
+			$("#quotes .row").css("position","relative");
+			startWorkContent();
+  			startSammy();
+});
+
+function startWorkContent(){
 	$("#vanderbilt").click(function(){
 		$("#thrv3_content").slideUp("slow");
 		$("#invivolink_content").slideUp("slow");
@@ -378,37 +379,7 @@ $('#home').css("height", $(window).height());
 		$("#gifthub_content").slideDown("slow");
 		return false;
 	});
-
-	// $("img.img-circle").hover(
-	// 	function () {
-	// 		var teamMemberName = $(this).attr("alt");
-	// 		$(this).next().text(teamMemberName);
-	// 	},
-	// 	function () {
-	// 		var teamMemberName = $(this).attr("alt");
-	// 		if (teamMemberName=="Colin") {
-	// 			$(this).next().text("CEO, co-founder");
-	// 		}
-	// 		else if (teamMemberName=="Byron") {
-	// 			$(this).next().text("CTO, co-founder");
-	// 		}
-	// 		else if (teamMemberName=="David") {
-	// 			$(this).next().text("CFO, co-founder");
-	// 		}
-	// 		else if (teamMemberName=="Andy") {
-	// 			$(this).next().text("Designer/UX");
-	// 		}
-	// 		else if (teamMemberName=="Dan") {
-	// 			$(this).next().text("Business Development");
-	// 		}
-	// 		else{
-	// 			$(this).next().text("Developer");
-	// 		}
-
-	// 	}
-	// );
-
-});
+}
 
 function loadAllSectionsAndScrollToSection(sectionName){
         $('#content').empty();
