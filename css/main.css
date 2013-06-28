@@ -511,6 +511,10 @@ body{
 	font-family:'gotham_htf_book',sans-serif,arial;
 }
 
+#team a{
+	color:inherit;
+	text-decoration: none;
+}
 
 #team .row{
 	text-align: center;
