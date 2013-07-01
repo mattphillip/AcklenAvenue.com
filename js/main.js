@@ -321,7 +321,7 @@ $('#home').css("height", $(window).height());
 			startServiceContentEffect();
 			$('#quotes').cycle({ 
 			    fx:      'scrollRight', 
-			    delay:   -6000,
+			    delay:   -15000,
 			    height: 500,
 			});
 			$("#quotes .row").css("position","relative");
