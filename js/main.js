@@ -327,6 +327,56 @@ $('#home').css("height", $(window).height());
 			$("#quotes .row").css("position","relative");
 			startWorkContent();
   			startSammy();
+
+  			$("#submit-quote").click(function(){
+  				
+
+				  // var hasError = false;
+				  // var emailReg = "/^([w-.]+@([w-]+.)+[w-]{2,4})?$/";
+
+				  // var clientEmail = $("#client-email").val();
+				  // if(clientEmail == '') {
+				  //  $("#client-email").after('<span class="error">You forgot to enter your email address</span>');
+				  //  hasError = true;
+				  // } else if(!emailReg.test(clientEmail)) {
+				  //  $("#client-email").after('<span class="error">Enter a valid email address.</span>');
+				  //  hasError = true;
+				  // }
+
+				  // var clientName = $("#client-name").val();
+				  // if (clientName == '') {
+				  // 	$("#client-name").after('<span class="error">You forgot to enter your name.</span>');
+				  // 	hasError = true;
+				  // }
+
+				  // var clientProject = $("#client-project").val();
+				  // if (clientProject == '') {
+				  // 	$("#client-project").after('<span class="error">You forgot to enter the project name.</span>');
+				  // 	hasError = true;
+				  // }
+
+				  // var clientMessage = $("#client-message").val();
+				  // if (clientMessage == '') {
+				  // 	$("#client-message").after('<span class="error">You forgot to enter the project name.</span>');
+				  // 	hasError = true;
+				  // }
+				  // else if (clientMessage.length < 140) {
+				  // 	$("#client-message").after('<span class="error">We think you need to add more description to it.</span>');
+				  // 	hasError = true;
+				  // }
+
+				  $.ajax({
+					type: "POST",
+					url: "http://api.postmarkapp.com/email",
+					data: { name: "John", location: "Boston" }
+					}).done(function( msg ) {
+						
+					});
+
+
+
+  				return false;
+  			});
 });
 
 function startWorkContent(){

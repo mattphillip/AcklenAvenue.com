@@ -231,12 +231,12 @@
             <div class="span10"> 
               <!-- 1 big image -->
               <div class="span5">
-                <div class="bigImage"> </div>
+                <img src="img/gifthub1.jpg" class="bigImage"/>
               </div>
               <!-- 2 small images -->
               <div class="span3">
-                <div class="smallImage"> </div>
-                <div class="smallImage"> </div>
+                <img src="img/gifthub2.jpg" class="smallImage"/>
+                <img src="img/gifthub3.jpg" class="smallImage"/>
               </div>
             </div>
             
@@ -322,13 +322,18 @@
       <div class="row" style="padding-top:100px;">
         <div class="offset4 span3">
           <h2 class="contactTitle">GET A QUOTE</h2>
-          <form name="Quote">
+          <form name="Quote" method="post" enctype="text/plain">
             <fieldset>
-              <input type="text" name="YourName" placeholder="Your name">
-              <input type="email" name="YourEmail" placeholder="Your email">
-              <input type="text" name="ProjectName" placeholder="Project name">
+              
+              <input id="client-name" type="text" name="YourName" placeholder="Your name">
+              
+              <input id="client-email" type="email" name="YourEmail" placeholder="Your email">
+              
+              <input id="client-project" type="text" name="ProjectName" placeholder="Project name">
+             
               <p class="contactParagraph"> What are some goals this project should help you accomplish?</p>
-              <textarea rows="5"></textarea>
+              <textarea id="client-project" rows="5"></textarea>
+
             </fieldset>
             <input id="submit-quote" type="submit" value="SEND">
           </form>

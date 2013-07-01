@@ -624,6 +624,12 @@ body{
 	top:-2px;
 }
 
+#contact .error{
+	font-family:'gotham_htf_medium',sans-serif,arial;
+	font-size: 10pt;
+	color:red;
+}
+
 #contact .container{
 	background-color: rgba(204,204,204,0.6);
 	height:550px;
