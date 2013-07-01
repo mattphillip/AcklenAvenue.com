@@ -323,6 +323,7 @@ $('#home').css("height", $(window).height());
 			    fx:      'scrollRight', 
 			    delay:   -15000,
 			    height: 500,
+			    pause:1
 			});
 			$("#quotes .row").css("position","relative");
 			startWorkContent();
