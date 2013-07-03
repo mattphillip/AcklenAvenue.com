@@ -299,8 +299,6 @@ function startSammy(){
 
           this.get('#/team', function(context){
           	    console.log("go to team");
-
-          		scrollToSectionWithName("#team");
           });
 
           this.get('#/contact', function(context){
@@ -328,6 +326,27 @@ $('#home').css("height", $(window).height());
 			$("#quotes .row").css("position","relative");;
 			startWorkContent();
   			startSammy();
+
+
+  			$("#home-menu").click(function(){
+  				app.refresh();
+  			});
+
+  			$("#services-menu").click(function(){
+  				app.refresh();
+  			});
+
+  			$("#work-menu").click(function(){
+  				app.refresh();
+  			});
+
+  			$("#team-menu").click(function(){
+  				app.refresh();
+  			});
+
+  			$("#contact-menu").click(function(){
+  				app.refresh();
+  			});
 
   			$("#submit-quote").click(function(){
   				
@@ -366,13 +385,13 @@ $('#home').css("height", $(window).height());
 				  // 	hasError = true;
 				  // }
 
-				  $.ajax({
-					type: "POST",
-					url: "http://api.postmarkapp.com/email",
-					data: { name: "John", location: "Boston" }
-					}).done(function( msg ) {
+				 //  $.ajax({
+					// type: "POST",
+					// url: "http://api.postmarkapp.com/email",
+					// data: { name: "John", location: "Boston" }
+					// }).done(function( msg ) {
 						
-					});
+					// });
 
 
 
