@@ -385,7 +385,7 @@ function startWorkContent(){
 		$("#thrv3_content").slideUp("slow");
 		$("#invivolink_content").slideUp("slow");
 		$("#leankit_content").slideUp("slow");
-		$("#gifthub_content").slideUp("slow");
+		// $("#gifthub_content").slideUp("slow");
 		$("#piims_content").slideUp("slow");
 		$("#vanderbilt_content").slideDown("slow");
 		return false;
@@ -396,7 +396,7 @@ function startWorkContent(){
 		$("#vanderbilt_content").slideUp("slow");
 		$("#invivolink_content").slideUp("slow");
 		$("#leankit_content").slideUp("slow");
-		$("#gifthub_content").slideUp("slow");
+		// $("#gifthub_content").slideUp("slow");
 		$("#piims_content").slideDown("slow");
 		return false;
 	});
@@ -405,7 +405,7 @@ function startWorkContent(){
 		$("#thrv3_content").slideUp("slow");
 		$("#vanderbilt_content").slideUp("slow");
 		$("#leankit_content").slideUp("slow");
-		$("#gifthub_content").slideUp("slow");
+		// $("#gifthub_content").slideUp("slow");
 		$("#piims_content").slideUp("slow");
 		$("#invivolink_content").slideDown("slow");
 		return false;
@@ -414,22 +414,22 @@ function startWorkContent(){
 	$("#leankit").click(function(){
 		$("#thrv3_content").slideUp("slow");
 		$("#vanderbilt_content").slideUp("slow");
-		$("#gifthub_content").slideUp("slow");
+		// $("#gifthub_content").slideUp("slow");
 		$("#piims_content").slideUp("slow");
 		$("#invivolink_content").slideUp("slow");
 		$("#leankit_content").slideDown("slow");
 		return false;
 	});
 
-	$("#gifthub").click(function(){
-		$("#thrv3_content").slideUp("slow");
-		$("#vanderbilt_content").slideUp("slow");
-		$("#piims_content").slideUp("slow");
-		$("#invivolink_content").slideUp("slow");
-		$("#leankit_content").slideUp("slow");
-		$("#gifthub_content").slideDown("slow");
-		return false;
-	});
+	// $("#gifthub").click(function(){
+	// 	$("#thrv3_content").slideUp("slow");
+	// 	$("#vanderbilt_content").slideUp("slow");
+	// 	$("#piims_content").slideUp("slow");
+	// 	$("#invivolink_content").slideUp("slow");
+	// 	$("#leankit_content").slideUp("slow");
+	// 	$("#gifthub_content").slideDown("slow");
+	// 	return false;
+	// });
 }
 
 function loadAllSectionsAndScrollToSection(sectionName){

@@ -542,6 +542,11 @@ body{
 	background-image:url(../img/background-window.jpg);
 }
 
+#tagline .backgroundContainer{
+	background-color:rgba(102,153,204, 0.4);
+	width:100%;
+}
+
 #tagline h1 strong{
 	font-family: 'gotham_htf_bold',sans-serif,arial;
 }
@@ -703,6 +708,7 @@ form{
 	width: 700px;
 	position:relative;
 	letter-spacing: 4pt;
+	color:white;
 }
 
 #quotes p.author
@@ -712,5 +718,6 @@ form{
 	padding-right: 10px;
 	font-style: normal;
 	font-family: 'gotham_htf_bold',sans-serif,arial;
+	color:white;
 }
 
