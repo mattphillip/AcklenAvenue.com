@@ -544,6 +544,9 @@ body{
 
 #tagline .backgroundContainer{
 	background-color:rgba(102,153,204, 0.4);
+	position:relative;
+	top: 150px;
+	height:250px;
 	width:100%;
 }
 
@@ -695,8 +698,9 @@ form{
 #quotes .row
 {
 	position: relative !important;
-	padding-top: 200px;
+	top: 25px !important;
 	margin-left: 0;
+	margin-bottom: 60px !important;
 }
 
 #quotes p {

@@ -322,10 +322,10 @@ $('#home').css("height", $(window).height());
 			$('#quotes').cycle({ 
 			    fx:      'scrollRight', 
 			    delay:   -15000,
-			    height: 500,
+			    height: 250,
 			    pause:1
 			});
-			$("#quotes .row").css("position","relative");
+			$("#quotes .row").css("position","relative");;
 			startWorkContent();
   			startSammy();
 
