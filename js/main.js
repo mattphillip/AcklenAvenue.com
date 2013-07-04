@@ -298,7 +298,7 @@ function startSammy(){
       	  });
 
           this.get('#/team', function(context){
-          	    console.log("go to team");
+          		scrollToSectionWithName("#team");
           });
 
           this.get('#/contact', function(context){
