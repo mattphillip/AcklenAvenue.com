@@ -349,53 +349,47 @@ $('#home').css("height", $(window).height());
   			});
 
   			$("#submit-quote").click(function(){
-  				
 
-				  // var hasError = false;
-				  // var emailReg = "/^([w-.]+@([w-]+.)+[w-]{2,4})?$/";
+  				var mailModel = {
+  					Name:$("#client-name").val(),
+  					Email:$("#client-email").val(),
+  					ProjectName:$("#client-project").val(),
+  					Message:$("#client-message").val()
+  				};
 
-				  // var clientEmail = $("#client-email").val();
-				  // if(clientEmail == '') {
-				  //  $("#client-email").after('<span class="error">You forgot to enter your email address</span>');
-				  //  hasError = true;
-				  // } else if(!emailReg.test(clientEmail)) {
-				  //  $("#client-email").after('<span class="error">Enter a valid email address.</span>');
-				  //  hasError = true;
-				  // }
+  				var error = false;
+  				if (mailModel.Name=="") {
+  					$("#client-name").css("border-color","red");
+  					error = true;
+  				}
+  				if (mailModel.Email == "" || isValidEmailAddress(mailModel.Email)) {
+  					$("#client-email").css("border-color","red");
+  					error = true;
+  				}
+  				if (mailModel.ProjectName == ""){
+  					$("#client-project").css("border-color","red");
+  					error = true;
+  				}
+  				if (mailModel.Message == ""){
+  					$("#client-message").css("border-color","red");
+  					error = true;
+  				}
 
-				  // var clientName = $("#client-name").val();
-				  // if (clientName == '') {
-				  // 	$("#client-name").after('<span class="error">You forgot to enter your name.</span>');
-				  // 	hasError = true;
-				  // }
+  				if (error) {
+  					alert('All fields are required');
+  					return false;
+  				};
 
-				  // var clientProject = $("#client-project").val();
-				  // if (clientProject == '') {
-				  // 	$("#client-project").after('<span class="error">You forgot to enter the project name.</span>');
-				  // 	hasError = true;
-				  // }
-
-				  // var clientMessage = $("#client-message").val();
-				  // if (clientMessage == '') {
-				  // 	$("#client-message").after('<span class="error">You forgot to enter the project name.</span>');
-				  // 	hasError = true;
-				  // }
-				  // else if (clientMessage.length < 140) {
-				  // 	$("#client-message").after('<span class="error">We think you need to add more description to it.</span>');
-				  // 	hasError = true;
-				  // }
-
-				 //  $.ajax({
-					// type: "POST",
-					// url: "http://api.postmarkapp.com/email",
-					// data: { name: "John", location: "Boston" }
-					// }).done(function( msg ) {
-						
-					// });
-
-
-
-  				return false;
+  				$.ajax({
+					type: "POST",
+					url: "http://emailer-3.apphb.com/api/Mail",
+					data: mailModel,
+					dataType: 'application/json',
+					success : function(msg){
+						console.log("success: "+msg);
+					}
+					});
+  			 	return false;
   			});
 });
 
@@ -466,6 +460,11 @@ function loadAllSectionsAndScrollToSection(sectionName){
 			$("#quotes .row").css("position","relative");
 			scrollToSectionWithName(sectionName);
         });
+};
+
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
+    return pattern.test(emailAddress);
 };
 
 
