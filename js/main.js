@@ -389,6 +389,13 @@ $('#home').css("height", $(window).height());
 						console.log("success: "+msg);
 					}
 					});
+
+  					$("#client-name").val("");
+  					$("#client-email").val("");
+  					$("#client-project").val("");
+  					$("#client-message").val("");
+  					alert('Email sent. We will contact you soon, Thanks!')
+
   			 	return false;
   			});
 });
