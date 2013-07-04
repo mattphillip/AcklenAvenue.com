@@ -362,7 +362,7 @@ $('#home').css("height", $(window).height());
   					$("#client-name").css("border-color","red");
   					error = true;
   				}
-  				if (mailModel.Email == "" || isValidEmailAddress(mailModel.Email)) {
+  				if (mailModel.Email == "" || !isValidEmailAddress(mailModel.Email)) {
   					$("#client-email").css("border-color","red");
   					error = true;
   				}
