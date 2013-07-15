@@ -116,7 +116,9 @@ function startServiceContentEffect(){
 	  if ($("#custom-software-desc").is(":visible")) {
 	  	$("#custom-software-desc").hide("slow");
 	  	$("#custom-software-title").addClass("notActive");
-	  };	
+	  };
+
+
 	  
 	  if ($("#nearshore-desc").is(":visible")) {
 	  	$("#nearshore-desc").hide("slow");
@@ -311,9 +313,10 @@ function startSammy(){
 
 $(document).ready(function() {
 
-$('#home').css("height", $(window).height());
+			$('#home').css("height", $(window).height());
 
 			var s = skrollr.init();
+
 			startCircularAvatars();
 			drawTriangle();
 			startServiceContentEffect();
@@ -323,6 +326,7 @@ $('#home').css("height", $(window).height());
 			    height: 250,
 			    pause:1
 			});
+			
 			$("#quotes .row").css("position","relative");;
 			startWorkContent();
   			startSammy();
