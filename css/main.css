@@ -145,7 +145,8 @@ body{
 }
 
 .slide{
-	background-attachment: fixed;
+	position: fixed;
+	/*background-attachment: fixed;*/
     background-repeat: no-repeat;
     background-size: 100% auto;
     position: relative;
@@ -156,6 +157,7 @@ body{
 {
 	background-image:url(../img/home-background3.jpg);
 	background-position: top;
+	min-height: 650px;
 }
 
 #home h1
