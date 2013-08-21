@@ -155,9 +155,7 @@ body{
 #home
 {
 	background-image:url(../img/home-background3.jpg);
-	min-height:650px;
 	background-position: top;
-	
 }
 
 #home h1
@@ -549,7 +547,7 @@ body{
 
 #tagline{
 	background-image:url(../img/background-window.jpg);
-	min-height:650px;
+	min-height: 550px;
 }
 
 #tagline .backgroundContainer{
