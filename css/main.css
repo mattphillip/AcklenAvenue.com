@@ -171,7 +171,15 @@ body{
 	position:relative;
 	font-family:'gotham_htf_book',sans-serif,arial;
 	line-height: 105%;
-	padding-top: 30%;
+	padding-top: 10%;
+}
+
+#home .backgroundContainer{
+	background-color:rgba(255,255,255, 0.4);
+	position:relative;
+	top: 260px;
+	height:250px;
+	width:100%;
 }
 
 .blogSideBar{
