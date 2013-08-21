@@ -323,17 +323,19 @@ window.mobilecheck = function() {
 $(document).ready(function() {
 
 			if (window.mobilecheck()) {
+				$('#home').css("min-height", "550px");
 			}
 			else{
 				$(".slide").css("position","");
 				$(".slide").css("background-attachment","fixed");
+				$('#home').css("min-height", $(window).height());
 			}
 
 
 			
 			
 
-			// $('#home').css("min-height", $(window).height());
+		    
 
 			var s = skrollr.init();
 
