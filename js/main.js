@@ -313,7 +313,7 @@ function startSammy(){
 
 $(document).ready(function() {
 
-			$('#home').css("height", $(window).height());
+			$('#home').css("min-height", $(window).height());
 
 			var s = skrollr.init();
 
