@@ -313,6 +313,8 @@ function startSammy(){
 
 $(document).ready(function() {
 
+			console.log('windows height:'+$(window).height())
+
 			$('#home').css("min-height", $(window).height());
 
 			var s = skrollr.init();
