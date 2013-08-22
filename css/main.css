@@ -401,7 +401,7 @@ body{
 {
 	background-image:url(../img/background-street.jpg);
 	background-position:center center;
-	
+	/*background-size: 100% 100%;*/
 }
 
 #work ul{
@@ -549,7 +549,6 @@ body{
 
 #tagline{
 	background-image:url(../img/background-window.jpg);
-	min-height: 550px;
 }
 
 #tagline .backgroundContainer{

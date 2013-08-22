@@ -324,11 +324,14 @@ $(document).ready(function() {
 
 			if (window.mobilecheck()) {
 				$('#home').css("min-height", "550px");
+				$('#tagline').css("min-height","450px");
+				$('#work').css('background-size',"100% 100%");
 			}
 			else{
 				$(".slide").css("position","");
 				$(".slide").css("background-attachment","fixed");
 				$('#home').css("min-height", $(window).height());
+				$('#tagline').css("min-height","550px");
 			}
 
 
