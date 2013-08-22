@@ -322,7 +322,9 @@ window.mobilecheck = function() {
 
 $(document).ready(function() {
 
+		console.log('width: '+$(window).width());
 			if (window.mobilecheck()) {
+				$('#content').css("width","1100px");
 				$('#home').css("min-height", "550px");
 				$('#tagline').css("min-height","450px");
 				$('#work').css('background-size',"100% 100%");
