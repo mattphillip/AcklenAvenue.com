@@ -1,0 +1,4 @@
+name: Acklen Avenue Blog
+markdown: redcarpet
+pygments: true
+destination: ../blog
