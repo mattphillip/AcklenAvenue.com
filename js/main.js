@@ -304,8 +304,10 @@ function startSammy(){
           });
 
           this.get('#/contact', function(context){
-          	scrollToSectionWithName("#contact");
-          });   
+          	    scrollToSectionWithName("#contact");
+          });
+
+
         });
 
 		app.run('#/');
