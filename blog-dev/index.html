@@ -8,13 +8,13 @@ title: Acklen Avenue Blog
         <div class="span8">
             {% for post in site.posts %}
 
-            <article>
+            <article style="padding-bottom: 50px">
                 <header>
                     <h2>
                         <a href="../blog{{ post.url }}">{{ post.title }}</a>
                     </h2>
                     <div>
-                        <span>Posted on </span> <span>{{ post.date | date_to_string }}</span>
+                        <span>Posted on {{ post.date | date_to_string }} by {{ post.post_author }}</spa>
                     </div>
                 </header>
                 <div>
@@ -30,8 +30,9 @@ title: Acklen Avenue Blog
         </div>
         <div class="span3">
             <div class="recentPosts">
-                {% for post in site.posts %}
                 <h3>Recent Posts</h3>
+                {% for post in site.posts %}
+
                 <ul>
                     <li>
                         <a href="../blog{{ post.url }}">{{ post.title }}</a>

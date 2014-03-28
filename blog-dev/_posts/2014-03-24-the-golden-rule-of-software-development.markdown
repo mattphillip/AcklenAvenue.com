@@ -3,6 +3,8 @@ layout: post
 title:  The Golden Rule of Software Development
 date:   2014-01-19 10:52:48
 categories: software
+post_author: Byron Sommardahl
+post_gravatar: 76dbcc74021b8039f14c7b583978b56d
 ---
 
 <div style="float:left">![My screenshot](http://awkwardcoder.com/wp-content/uploads/2014/01/Preach_it.jpg) </div>I’ve gone to church all my life and “The Golden Rule” has been pound into my head since I was a toddler: “Do to others as you would have them do to you.” That’s Jesus talking in Matthew 7:12, by the way. Now, I’m not going to preach, so don’t navigate away too quickly… Well, I’m not going to preach about the Bible anyhow. I guess I am going to preach a little about how I think software developers should change their evil ways.
