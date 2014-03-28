@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  The Golder Rule of Software Development
+title:  The Golden Rule of Software Development
 date:   2014-01-19 10:52:48
 categories: software
 ---

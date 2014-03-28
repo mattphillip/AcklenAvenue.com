@@ -16,7 +16,7 @@ body {
   background-color: #FFF;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
-  text-align: justify;
+  text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,6 +47,10 @@ a:visited { color: #a0a; }
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
+}
+
+#blog-home{
+    padding-top: 50px;
 }
 
 /*****************************************************************************/
@@ -126,6 +130,21 @@ a:visited { color: #a0a; }
 /* Posts
 /*
 /*****************************************************************************/
+
+
+.recentPosts{
+    background-color: lightgrey;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-color: darkgray;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.recentPosts h3{
+    text-align: center;
+}
 
 /* standard */
 .post pre {
