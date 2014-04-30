@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <link rel="shortcut icon" href="/img/favicon.ico" />
+
+        <title>Craftsman Tip #1: How to Recognize Exceptions</title>
+        <!--<meta name="viewport" content="width=device-width">-->
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/blog/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/blog/css/main.css">
+
+        <link rel="stylesheet" href="/css/bootstrap.css">
+
+        <link rel="stylesheet" href="/css/main.css">
+
+
+    </head>
+    <body>
+
+        <section id="content">
+          <!--<div class="header">-->
+            <!--<h1 class="title"><a href="/blog/index.html">Acklen Avenue Blog</a></h1>-->
+            <!--<a class="extra" href="/#/">home</a>-->
+          <!--</div>-->
+            <section id="header" style="color:rgb(55, 55, 55); position:relative;">
+                <div class="container">
+                    <div class="row">
+                        <div class="span3">
+                            <a id="home-menu" href="/#/">
+                                <div style="background-image:url(/img/acklen-logo-transparent-dark.png)" class="logo" ></div>
+                            </a>
+                        </div>
+                        <div class="offset4 span5">
+                            <nav>
+                                <li > <a id="services-menu" href="/#/services">services</a></li>
+                                <li > <a id="work-menu"  href="/#/work">work</a></li>
+                                <li > <a id="team-menu"  href="/#/team">team</a></li>
+                                <li > <a id="blog-menu"  href="/blog/index.html">blog</a></li>
+                                <li > <a id="contact-menu"  href="/#/contact">contact</a></li>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="blog-content">
+                <div class="container">
+                    <h2>Craftsman Tip #1: How to Recognize Exceptions</h2>
+<p class="meta">19 Jul 2013</p>
+
+<div class="post">
+<p>Part of being a software craftsman is knowing how to recognize exceptions. Really, it takes time to build up enough experience seeing and fixing exceptions so that you can simply say, “I’ve seen this before. The problem is…” Along the way, when you find an exception that’s not very helpful in its message, get in the habit of looking at the inner exceptions until you reach the first exception. That will probably be the one that tells you what the real problem it is. Then remember the exception by its type or the error message so that you don’t have to google anything next time.</p>
+
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'acklenavenueblog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </div>
+                <canvas id="triangle"></canvas>
+            </section>
+
+            <section id="team" class="slide">
+                <div class="container">
+                    <div class="row" style="text-align:left">
+                        <div class="span3">
+                            <h1>// TEAM</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="avatar span3">
+                            <img src="/img/colin.jpg" alt="Colin" class="img-circle" width="180" height="180" />
+                            <h4>Colin</h4>
+                            <h5>CEO, co-founder</h4>
+                        </div>
+                        <div class="avatar span3">
+                            <img src="/img/byron.jpg" alt="Byron" class="img-circle" width="180" height="180" />
+                            <h4><a href="http://awkwardcoder.com/">Byron</a></h4>
+                            <h5>CTO, co-founder</h5>
+                        </div>
+                        <div class="avatar span3">
+                            <img src="/img/david.jpg" alt="David" class="img-circle" width="180" height="180" />
+                            <h4>David</h4>
+                            <h5>CFO, co-founder</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="avatar span2">
+                            <img src="/img/camilo.jpg" alt="Camilo" class="img-circle" width="130" height="130" />
+                            <h5><a href="http://www.linkedin.com/in/kmiloaguilar">Camilo</a></h5>
+                            <h6>Scrum Master</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/javier.jpg" alt="Javier" class="img-circle" width="130" height="130" />
+                            <h5>Javier</h5>
+                            <h6>Developer</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/rene.jpg" alt="Rene" class="img-circle" width="130" height="130" />
+                            <h5>Rene</h5>
+                            <h6>Developer</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/viktor.jpg" alt="Viktor" class="img-circle" width="130" height="130" />
+                            <h5>Viktor</h5>
+                            <h6>Developer</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/sharon.jpg" alt="Sharon" class="img-circle" width="130" height="130" />
+                            <h5>Sharon</h5>
+                            <h6>Developer</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/saul.jpg" alt="Saul" class="img-circle" width="130" height="130" />
+                            <h5>Saul</h5>
+                            <h6>Developer</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="avatar span2">
+                            <img src="/img/juan.jpg" alt="Juan" class="img-circle" width="130" height="130" />
+                            <h5>Juan</h5>
+                            <h6>Developer</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/richard.jpg" alt="Richard" class="img-circle" width="130" height="130" />
+                            <h5>Richard</h5>
+                            <h6>Developer</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/andy.jpg" alt="Andy" class="img-circle" width="130" height="130" />
+                            <h5>Andy</h5>
+                            <h6>Designer/UX</h6>
+                        </div>
+                        <div class="avatar span2">
+                            <img src="/img/nathaniel.jpg" alt="Nathaniel" class="img-circle" width="130" height="130" />
+                            <h5>Nathaniel</h5>
+                            <h6>Project Coordinator</h6>
+                        </div>git
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="slide">
+                <div class="container">
+                    <div class="row" style="padding-top:100px;">
+                        <div class="offset4 span3">
+                            <h2 class="contactTitle">GET A QUOTE</h2>
+                            <!-- <form name="Quote" method="post" enctype="text/plain">
+                              <fieldset>
+                             -->
+                            <input id="client-name" type="text" name="YourName" placeholder="Your name">
+
+                            <input id="client-email" type="email" name="YourEmail" placeholder="Your email">
+
+                            <input id="client-project" type="text" name="ProjectName" placeholder="Project name">
+
+                            <p class="contactParagraph"> What are some goals this project should help you accomplish?</p>
+
+                            <textarea id="client-message" rows="5"></textarea>
+
+                            <!--  </fieldset> -->
+                            <input id="submit-quote" type="submit" value="SEND">
+                            <!-- </form> -->
+                        </div>
+                        <div class="offset2 span3" style="padding-top:135px;">
+                            <h4 class="contactSubtitle">CONTACT US</h4>
+                            <p class="contactParagraph">615.988.4700</p>
+                            <p  class="contactParagraph">
+                                Acklen Avenue Software <br/>
+                                1204 Elmwood Avenue<br/>
+                                Nashville, TN 37212 </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/minified/jquery.effects.core.min.js"></script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/minified/jquery.effects.slide.min.js"></script>
+        <script src="/js/vendor/skrollr.min.js"></script>
+        <script src="/js/vendor/sammy-latest.min.js"></script>
+        <script src="/js/vendor/jquery.cycle.all.min.js"></script>
+        <script src="/js/vendor/jquery.hoverizr.min.js"></script>
+
+        <!--[if IE]>
+        <script src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+        <![endif]-->
+
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <!-- <script src="js/plugins.js"></script>  -->
+        <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="/js/main.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-42413832-1', 'acklenavenue.com');
+            ga('send', 'pageview');
+
+        </script>
+        <script>
+            // Avoid `console` errors in browsers that lack a console.
+            (function() {
+                var method;
+                var noop = function () {};
+                var methods = [
+                    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+                    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+                    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+                    'timeStamp', 'trace', 'warn'
+                ];
+                var length = methods.length;
+                var console = (window.console = window.console || {});
+
+                while (length--) {
+                    method = methods[length];
+
+                    // Only stub undefined methods.
+                    if (!console[method]) {
+                        console[method] = noop;
+                    }
+                }
+            }());
+            // Place any jQuery/helper plugins in here.
+        </script>
+
+    </body>
+</html>
